@@ -16,21 +16,15 @@ body {
 
 /* Banner Styles */
 .banner {
-  background-image: linear-gradient(to bottom, #005f73, #004853);
-  /* Same gradient as footer */
-  color: white;
-  /* White text for contrast */
-  text-align: center;
-  /* Center the text */
-  padding: 15px 0;
-  /* Padding above and below the text */
-  font-size: 24px;
-  /* Font size for visibility */
-  font-weight: bold;
-  /* Bold text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  /* Text shadow for depth and readability */
+  background-image: linear-gradient(to bottom, #005f73, #004853); /* Gradient as before */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  padding: 8px 0; /* Reduced padding for a smaller banner */
+  font-size: 20px; /* Adjust font size if needed */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for legibility */
 }
+
 
 
 /* Hero Section */
