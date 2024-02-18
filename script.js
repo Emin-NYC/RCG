@@ -50,3 +50,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+document.querySelector('.to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
