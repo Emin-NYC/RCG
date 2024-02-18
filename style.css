@@ -19,6 +19,12 @@ header {
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Increased shadow intensity */
+  animation: 1s ease-out 0s 1 slideInFromTop; /* Slide in from top */
+}
+
+/* Apply the animation to header elements */
+header h1, header p {
+  animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
 header h1 {
@@ -142,3 +148,42 @@ footer {
     top: 0;
   }
 }
+
+/* Keyframes for slide-in animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to each section's heading and paragraph */
+#about-us h2, #about-us p,
+#services h2, .service p,
+#testimonials h2, .testimonial p,
+#partnership h2, #partnership p {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
+/* Initial state for section elements (hidden and positioned to the left) */
+#about-us, #services, #testimonials, #partnership {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
