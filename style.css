@@ -78,6 +78,7 @@ button:hover {
   border-top-left-radius: 50% 20%;
   border-top-right-radius: 50% 20%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 /* Services Section */
@@ -183,17 +184,18 @@ footer {
   }
 }
 
+
 /* Apply the animation to each section's heading and paragraph */
-#about-us h2, #about-us p,
 #services h2, .service p,
 #testimonials h2, .testimonial p,
 #partnership h2, #partnership p {
+  /* Animation is set but not activated yet */
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 
 /* Initial state for section elements (hidden and positioned to the left) */
-#about-us, #services, #testimonials, #partnership {
+#services, #testimonials, #partnership {
   opacity: 0;
   transform: translateX(-100%);
 }
