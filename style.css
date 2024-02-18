@@ -10,6 +10,17 @@ color: #000000; /* Black text */
   line-height: 1.8;
   
 }
+/* Banner Styles */
+.banner {
+  background-image: linear-gradient(to bottom, #005f73, #004853); /* Same gradient as footer */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center the text */
+  padding: 15px 0; /* Padding above and below the text */
+  font-size: 24px; /* Font size for visibility */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth and readability */
+}
+
 
 /* Hero Section */
 header {
