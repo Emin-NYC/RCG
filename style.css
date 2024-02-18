@@ -301,3 +301,13 @@ footer {
     /* Smaller font size for smaller screens */
   }
 }
+
+footer a[href^="tel"], 
+footer .contact-info, 
+footer a[href^="tel"]:visited, 
+footer a[href^="tel"]:active, 
+footer .contact-info:visited, 
+footer .contact-info:active {
+    color: white; /* Set the color to white */
+    text-decoration: none; /* Remove underline */
+}
