@@ -3,54 +3,74 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-color: #000000; /* Black text */
-  background-color: #FFFFFF; /* White background */
-  text-align: center; /* Ensures text is centered */
+  color: #000000;
+  /* Black text */
+  background-color: #FFFFFF;
+  /* White background */
+  text-align: center;
+  /* Ensures text is centered */
   letter-spacing: 0.5px;
   line-height: 1.8;
-  
+
 }
+
 /* Banner Styles */
 .banner {
-  background-image: linear-gradient(to bottom, #005f73, #004853); /* Same gradient as footer */
-  color: white; /* White text for contrast */
-  text-align: center; /* Center the text */
-  padding: 15px 0; /* Padding above and below the text */
-  font-size: 24px; /* Font size for visibility */
-  font-weight: bold; /* Bold text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth and readability */
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Same gradient as footer */
+  color: white;
+  /* White text for contrast */
+  text-align: center;
+  /* Center the text */
+  padding: 15px 0;
+  /* Padding above and below the text */
+  font-size: 24px;
+  /* Font size for visibility */
+  font-weight: bold;
+  /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Text shadow for depth and readability */
 }
 
 
 /* Hero Section */
 header {
-  background-image: linear-gradient(45deg, #f3d250, #e5b050); /* Metallic gold gradient */
+  background-image: linear-gradient(45deg, #f3d250, #e5b050);
+  /* Metallic gold gradient */
   color: white;
   padding: 100px 20px;
   position: relative;
   z-index: 1;
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Increased shadow intensity */
-  animation: 1s ease-out 0s 1 slideInFromTop; /* Slide in from top */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  /* Increased shadow intensity */
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  /* Slide in from top */
 }
 
 /* Apply the animation to header elements */
-header h1, header p {
+header h1,
+header p {
   animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
 header h1 {
   margin-bottom: 20px;
-  color: #005f73; /* Teal */
-  font-size: 46px; /* Increase font size */
-text-shadow: 1px 1px 2px #000000; /* Black shadow */
-  
+  color: #005f73;
+  /* Teal */
+  font-size: 46px;
+  /* Increase font size */
+  text-shadow: 1px 1px 2px #000000;
+  /* Black shadow */
+
 }
 
 header p {
-  font-size: 28px; /* Increase font size */
-   text-shadow: 2px 2px 4px #000000; /* Black shadow for contrast */
+  font-size: 28px;
+  /* Increase font size */
+  text-shadow: 2px 2px 4px #000000;
+  /* Black shadow for contrast */
 }
 
 .emphasis {
@@ -59,51 +79,68 @@ header p {
 
 /* Buttons */
 button {
-  background-color: #c9ada7; /* Soft Pink */
-  color: #283618; /* Dark Olive - Adjust if needed for better contrast */
+  background-color: #c9ada7;
+  /* Soft Pink */
+  color: #283618;
+  /* Dark Olive - Adjust if needed for better contrast */
   border: none;
   padding: 12px 25px;
   cursor: pointer;
-  font-size: 18px; /* Slightly larger font size */
-  font-weight: bold; /* Make text bold */
+  font-size: 18px;
+  /* Slightly larger font size */
+  font-weight: bold;
+  /* Make text bold */
   border-radius: 5px;
-  display: inline-block; /* Center align button */
-  margin: 20px 0; /* Spacing around buttons */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-  text-transform: uppercase; /* Uppercase text */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+  display: inline-block;
+  /* Center align button */
+  margin: 20px 0;
+  /* Spacing around buttons */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  /* Smooth transition for hover effects */
+  text-transform: uppercase;
+  /* Uppercase text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Text shadow for depth */
 }
 
 button:hover {
-  background-color: #9a8c98; /* Muted Lavender - Adjust if needed for better hover effect */
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover for depth */
+  background-color: #9a8c98;
+  /* Muted Lavender - Adjust if needed for better hover effect */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Shadow effect on hover for depth */
 }
 
 /* About Section */
 #about-us {
   padding: 40px 20px;
-  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0); /* Subtle off-white gradient */
+  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
+  /* Subtle off-white gradient */
   position: relative;
   z-index: 0;
   border-top-left-radius: 50% 20%;
   border-top-right-radius: 50% 20%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 /* Services Section */
 #services {
   padding: 40px 20px;
-  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5); /* Subtle off-white gradient */
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Subtle off-white gradient */
   position: relative;
   z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
 }
 
 .service-card {
   background-color: white;
-  margin: 0 auto; /* Center align card */
+  margin: 0 auto;
+  /* Center align card */
   max-width: 300px;
   padding: 20px;
   border-radius: 10px;
@@ -113,16 +150,19 @@ button:hover {
 
 /* Testimonials Section */
 #testimonials {
-  background-image: linear-gradient(to bottom, #9a8c98, #7c737e); /* Subtle lavender gradient */
+  background-image: linear-gradient(to bottom, #9a8c98, #7c737e);
+  /* Subtle lavender gradient */
   padding: 40px 20px;
   position: relative;
   z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
 }
 
 .testimonial-card {
   background-color: white;
-  margin: 0 auto; /* Center align card */
+  margin: 0 auto;
+  /* Center align card */
   max-width: 300px;
   padding: 20px;
   border-radius: 10px;
@@ -133,25 +173,30 @@ button:hover {
 /* Partnership Section */
 #partnership {
   padding: 40px 20px;
-  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5); /* Subtle off-white gradient */
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Subtle off-white gradient */
   position: relative;
   z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
 }
 
 /* Footer */
 footer {
-  background-image: linear-gradient(to bottom, #005f73, #004853); /* Subtle teal gradient */
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Subtle teal gradient */
   color: white;
   padding: 40px 20px;
   position: relative;
   z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
 }
 
 .footer-content {
   max-width: 800px;
-  margin: 0 auto; /* Center align footer content */
+  margin: 0 auto;
+  /* Center align footer content */
 }
 
 /* Responsive Design */
@@ -178,6 +223,7 @@ footer {
     transform: translateY(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -189,6 +235,7 @@ footer {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -197,17 +244,21 @@ footer {
 
 
 /* Apply the animation to each section's heading and paragraph */
-#services h2, .service p,
-#testimonials h2, .testimonial p,
-#partnership h2, #partnership p {
+#services h2,
+.service p,
+#testimonials h2,
+.testimonial p,
+#partnership h2,
+#partnership p {
   /* Animation is set but not activated yet */
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 
 /* Initial state for section elements (hidden and positioned to the left) */
-#services, #testimonials, #partnership {
+#services,
+#testimonials,
+#partnership {
   opacity: 0;
   transform: translateX(-100%);
 }
-
