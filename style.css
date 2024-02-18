@@ -1,61 +1,258 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Empowering seniors with digital literacy through tailored technology workshops and seminars.">
-    <title>Robin Consulting Group - Digital Empowerment for Seniors</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <div class="banner">
-      Robin Consulting
-    </div>
-    <header>
-        <h1>Digital Empowerment for Every Senior</h1>
-        <p>Discover a world of technology made accessible and enjoyable.</p>
-        <button id="discover-seminars">Explore Our Seminars</button>
-    </header>
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  /* Black text */
+  background-color: #FFFFFF;
+  /* White background */
+  text-align: center;
+  /* Ensures text is centered */
+  letter-spacing: 0.5px;
+  line-height: 1.8;
 
-    <section id="about-us">
-        <h2>About us</h2>      
-        <p>At Robin Consulting, we're dedicated to bridging the technology gap for seniors. Our mission is to provide engaging, understandable, and practical tech education.</p>
-        
-        <p>We enable seniors to connect with loved ones, access important services, and explore the digital world confidently and safely.</p>
+}
+
+/* Banner Styles */
+.banner {
+  background-image: linear-gradient(to bottom, #005f73, #004853); /* Gradient as before */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  padding: 8px 0; /* Reduced padding for a smaller banner */
+  font-size: 20px; /* Adjust font size if needed */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for legibility */
+}
 
 
-    </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <img src="workshop-icon.png" alt="Workshop Icon">
-            <p>Interactive Workshops - From basics to advanced topics, learn in a supportive environment.</p>
-        </div>
-        <!-- Repeat for other services -->
-    </section>
+/* Hero Section */
+header {
+  background-image: linear-gradient(45deg, #f3d250, #e5b050);
+  /* Metallic gold gradient */
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  /* Increased shadow intensity */
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  /* Slide in from top */
+}
 
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial">
-            <p>"The seminar on online safety was an eye-opener. I now feel more confident in navigating the internet securely." - Jane D.</p>
-            <img src="senior-img.jpg" alt="Senior attending seminar">
-        </div>
-        <!-- Repeat for other testimonials -->
-    </section>
+/* Apply the animation to header elements */
+header h1,
+header p {
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
 
-    <section id="partnership">
-        <h2>Partnership Opportunities</h2>
-        <p>Join us in making digital literacy accessible to seniors. Partner with us to expand the reach and impact of technology education.</p>
-        <!-- Include logos of partners -->
-    </section>
+header h1 {
+  margin-bottom: 20px;
+  color: #005f73;
+  /* Teal */
+  font-size: 46px;
+  /* Increase font size */
+  text-shadow: 1px 1px 2px #000000;
+  /* Black shadow */
 
-    <footer>
-        <button id="contact-us">Get in Touch</button>
-        <p>Contact us at info@robinconsultinggroup.com | (123) 456-7890</p>
-        <!-- Add social media icons -->
-    </footer>
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+header p {
+  font-size: 28px;
+  /* Increase font size */
+  text-shadow: 2px 2px 4px #000000;
+  /* Black shadow for contrast */
+}
+
+.emphasis {
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  background-color: #c9ada7;
+  /* Soft Pink */
+  color: #283618;
+  /* Dark Olive - Adjust if needed for better contrast */
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 18px;
+  /* Slightly larger font size */
+  font-weight: bold;
+  /* Make text bold */
+  border-radius: 5px;
+  display: inline-block;
+  /* Center align button */
+  margin: 20px 0;
+  /* Spacing around buttons */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  /* Smooth transition for hover effects */
+  text-transform: uppercase;
+  /* Uppercase text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Text shadow for depth */
+}
+
+button:hover {
+  background-color: #9a8c98;
+  /* Muted Lavender - Adjust if needed for better hover effect */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Shadow effect on hover for depth */
+}
+
+/* About Section */
+#about-us {
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
+  /* Subtle off-white gradient */
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+/* Services Section */
+#services {
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Subtle off-white gradient */
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.service-card {
+  background-color: white;
+  margin: 0 auto;
+  /* Center align card */
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-image: linear-gradient(to bottom, #9a8c98, #7c737e);
+  /* Subtle lavender gradient */
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.testimonial-card {
+  background-color: white;
+  margin: 0 auto;
+  /* Center align card */
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* Partnership Section */
+#partnership {
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Subtle off-white gradient */
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+/* Footer */
+footer {
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Subtle teal gradient */
+  color: white;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Center align footer content */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+
+  .service-card,
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  #about-us,
+  #services,
+  #testimonials,
+  #partnership,
+  footer {
+    border-radius: 0;
+    top: 0;
+  }
+}
+
+/* Keyframes for slide-in animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Apply the animation to each section's heading and paragraph */
+#services h2,
+.service p,
+#testimonials h2,
+.testimonial p,
+#partnership h2,
+#partnership p {
+  /* Animation is set but not activated yet */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
+/* Initial state for section elements (hidden and positioned to the left) */
+#services,
+#testimonials,
+#partnership {
+  opacity: 0;
+  transform: translateX(-100%);
+}
