@@ -32,9 +32,13 @@ body {
   /* Text shadow for legibility */
 }
 
-.no-highlight {
-    color: white; /* This sets the color to white */
-    text-decoration: none; /* This removes any underline */
+.contact-info {
+  display: block;
+  /* This makes each span take a full line */
+  color: white;
+  /* Keeps the text color white */
+  text-decoration: none;
+  /* Removes any underline */
 }
 
 
