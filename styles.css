@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #283618;
+  /* Dark Olive */
+  background-color: #e9d8a6;
+  /* Light Beige */
+  text-align: center;
+  /* Ensures text is centered */
+  line-height: 1.6;
+  /* Improved readability */
+}
+
+/* Hero Section */
+header {
+  background-image: url('header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  /* Increased shadow intensity */
+}
+
+header h1 {
+  margin-bottom: 20px;
+  color: #005f73;
+  /* Teal */
+  font-size: 46px;
+  /* Increase font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  /* Add text shadow for better readability */
+}
+
+header p {
+  font-size: 28px;
+  /* Increase font size */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* Add text shadow for better readability */
+}
+
+
+/* Buttons */
+button {
+  background-color: #c9ada7;
+  /* Soft Pink */
+  color: #283618;
+  /* Dark Olive */
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  display: inline-block;
+  /* Center align button */
+  margin: 20px 0;
+  /* Spacing around buttons */
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  /* Uppercase text */
+}
+
+button:hover {
+  background-color: #9a8c98;
+  /* Muted Lavender */
+}
+
+/* About Section */
+#about-us {
+  padding: 40px 20px;
+  background-color: #f9f7f5;
+  /* Lighter Off-white */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(229, 229, 224, 0.8)), url('header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+/* Services Section */
+#services {
+  padding: 40px 20px;
+  background-color: #f2e9e4;
+  /* Off-white */
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.service-card {
+  background-color: white;
+  margin: 0 auto;
+  /* Center align card */
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #9a8c98;
+  /* Muted Lavender */
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.testimonial-card {
+  background-color: white;
+  margin: 0 auto;
+  /* Center align card */
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* Partnership Section */
+#partnership {
+  padding: 40px 20px;
+  background-color: #f2e9e4;
+  /* Off-white */
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+/* Footer */
+footer {
+  background-color: #005f73;
+  /* Teal */
+  color: white;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Center align footer content */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+
+  .service-card,
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  #about-us,
+  #services,
+  #testimonials,
+  #partnership,
+  footer {
+    border-radius: 0;
+    top: 0;
+  }
+}
