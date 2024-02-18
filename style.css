@@ -409,6 +409,15 @@ footer .contact-info:active {
   /* Add a box shadow */
 }
 
+/* New Media Query for Desktop Screens */
+@media screen and (min-width: 768px) {
+  .modal-content {
+    max-width: 600px;
+    /* Set a maximum width for larger screens */
+  }
+}
+
+
 .close-button {
   color: #aaa;
   float: right;
