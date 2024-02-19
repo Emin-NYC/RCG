@@ -536,6 +536,7 @@ input[type="submit"]:hover {
   /* Soft, warm gradient */
   padding: 10px 0;
   /* Padding for the marquee */
+  margin-top: 20px;
   margin-bottom: 20px;
   /* Increased bottom margin */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
