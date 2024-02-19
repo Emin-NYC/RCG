@@ -37,26 +37,15 @@ a[href^="tel"]:active,
 
 /* Banner Styles */
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  /* Aligns items to the left */
-  padding: 8px 16px;
-  /* Other styles */
-  background-image: linear-gradient(to bottom, #005f73, #004853);
-  /* Gradient as before */
-  color: white;
-  /* Text color */
-  text-align: center;
-  /* Center the text */
-  padding: 8px 0;
-  /* Reduced padding for a smaller banner */
-  font-size: 20px;
-  /* Adjust font size if needed */
-  font-weight: bold;
-  /* Bold text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  /* Text shadow for legibility */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    background-image: linear-gradient(to bottom, #005f73, #004853);
+    color: white;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .banner-logo img {
@@ -71,9 +60,11 @@ a[href^="tel"]:active,
   background: none;
   /* Ensures no background color */
   /* Other styles */
-     margin-right: 20px; /* Space between logo and text */
-    fill: white; /* Set the color of the SVG */
-  
+  margin-right: 20px;
+  /* Space between logo and text */
+  fill: white;
+  /* Set the color of the SVG */
+
 }
 
 .banner img {
@@ -84,9 +75,10 @@ a[href^="tel"]:active,
 }
 
 .banner-text {
-    color: white;
-    text-decoration: none;
-    margin-left: auto; /* Pushes the text to the right on larger screens */
+  color: white;
+  text-decoration: none;
+  margin-left: auto;
+  /* Pushes the text to the right on larger screens */
 }
 
 .contact-info {
@@ -570,15 +562,17 @@ input[type="submit"]:hover {
 
 /* Responsive adjustments for mobile */
 @media screen and (max-width: 767px) {
-    .banner {
-        justify-content: center; /* Center content on mobile */
-    }
+  .banner {
+    justify-content: center;
+    /* Center content on mobile */
+  }
 
-    .banner-logo {
-        display: none; /* Hide logo on smaller screens if desired */
-    }
+  .banner-logo {
+    display: none;
+    /* Hide logo on smaller screens if desired */
+  }
 
-    .banner-text {
-        /* Additional styling for mobile if needed */
-    }
+  .banner-text {
+    /* Additional styling for mobile if needed */
+  }
 }
