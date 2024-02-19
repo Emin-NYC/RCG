@@ -528,3 +528,41 @@ input[type="submit"]:hover {
   /* Muted Lavender for hover */
   text-decoration: none;
 }
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #fff5e5, #ffe8cc); /* Soft, warm gradient */
+  padding: 10px 0; /* Padding for the marquee */
+  margin-bottom: 20px; /* Increased bottom margin */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+
+.marquee-content {
+  white-space: nowrap;
+  min-width: 150%; /* Reduced width */
+  display: inline-block;
+  animation: marquee 60s linear infinite; /* Slower animation */
+}
+
+/* Adjusting FontAwesome icon alignment */
+.marquee-content i.fas.fa-circle {
+  margin: 0 5px; /* Add some spacing around icons */
+  font-size: 0.5em; /* Adjust icon size as needed */
+  vertical-align: middle; /* Center icon vertically with text */
+}
+
+
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); } /* Adjust to ensure continuous scroll */
+}
+
+@media screen and (max-width: 767px) {
+  .marquee-content {
+    min-width: 150%; /* Adjust for smaller screens */
+    animation: marquee 60s linear infinite; /* Consistent slower animation for readability */
+  }
+}
