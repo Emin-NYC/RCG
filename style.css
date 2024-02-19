@@ -2,7 +2,7 @@
 body {
   font-family: 'Roboto Slab', serif;
   margin: 0;
-  padding: 0;
+  padding: 0, 20px;
   color: #000000;
   /* Black text */
   background-color: #FFFFFF;
@@ -591,5 +591,12 @@ input[type="submit"]:hover {
     /* Adjust for smaller screens */
     animation: marquee 60s linear infinite;
     /* Consistent slower animation for readability */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0 10px;
+    /* Less padding for smaller screens */
   }
 }
