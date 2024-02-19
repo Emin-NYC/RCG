@@ -68,6 +68,9 @@ a[href^="tel"]:active,
   /* Limits the size of the logo */
   max-width: 100%;
   /* Ensures the image is not wider than its container */
+  background: none;
+  /* Ensures no background color */
+  /* Other styles */
 }
 
 .banner img {
