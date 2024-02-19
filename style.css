@@ -71,6 +71,9 @@ a[href^="tel"]:active,
   background: none;
   /* Ensures no background color */
   /* Other styles */
+     margin-right: 20px; /* Space between logo and text */
+    fill: white; /* Set the color of the SVG */
+  
 }
 
 .banner img {
@@ -78,6 +81,12 @@ a[href^="tel"]:active,
   /* Adjust the size as needed */
   width: auto;
   /* Keeps the aspect ratio */
+}
+
+.banner-text {
+    color: white;
+    text-decoration: none;
+    margin-left: auto; /* Pushes the text to the right on larger screens */
 }
 
 .contact-info {
@@ -557,4 +566,19 @@ input[type="submit"]:hover {
   color: #9a8c98;
   /* Muted Lavender for hover */
   text-decoration: none;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 767px) {
+    .banner {
+        justify-content: center; /* Center content on mobile */
+    }
+
+    .banner-logo {
+        display: none; /* Hide logo on smaller screens if desired */
+    }
+
+    .banner-text {
+        /* Additional styling for mobile if needed */
+    }
 }
