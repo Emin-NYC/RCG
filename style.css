@@ -528,3 +528,21 @@ input[type="submit"]:hover {
   /* Muted Lavender for hover */
   text-decoration: none;
 }
+
+.banner {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Vertically centers the content */
+  justify-content: space-between; /* Spreads out the content */
+  padding: 8px 16px; /* Adjust padding as needed */
+  /* Other styles */
+}
+
+.banner-logo {
+  flex-shrink: 0; /* Prevents the logo from shrinking */
+  margin-right: 16px; /* Adds space between logo and the next content */
+}
+
+.banner img {
+  max-height: 50px; /* Adjust the size as needed */
+  width: auto; /* Keeps the aspect ratio */
+}
