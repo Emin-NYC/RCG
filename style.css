@@ -34,6 +34,15 @@ a[href^="tel"]:active,
 
 /* Banner Styles */
 .banner {
+  display: flex;
+  /* Enables flexbox */
+  align-items: center;
+  /* Vertically centers the content */
+  justify-content: space-between;
+  /* Spreads out the content */
+  padding: 8px 16px;
+  /* Adjust padding as needed */
+  /* Other styles */
   background-image: linear-gradient(to bottom, #005f73, #004853);
   /* Gradient as before */
   color: white;
@@ -48,6 +57,20 @@ a[href^="tel"]:active,
   /* Bold text */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   /* Text shadow for legibility */
+}
+
+.banner-logo {
+  flex-shrink: 0;
+  /* Prevents the logo from shrinking */
+  margin-right: 16px;
+  /* Adds space between logo and the next content */
+}
+
+.banner img {
+  max-height: 50px;
+  /* Adjust the size as needed */
+  width: auto;
+  /* Keeps the aspect ratio */
 }
 
 .contact-info {
@@ -527,22 +550,4 @@ input[type="submit"]:hover {
   color: #9a8c98;
   /* Muted Lavender for hover */
   text-decoration: none;
-}
-
-.banner {
-  display: flex; /* Enables flexbox */
-  align-items: center; /* Vertically centers the content */
-  justify-content: space-between; /* Spreads out the content */
-  padding: 8px 16px; /* Adjust padding as needed */
-  /* Other styles */
-}
-
-.banner-logo {
-  flex-shrink: 0; /* Prevents the logo from shrinking */
-  margin-right: 16px; /* Adds space between logo and the next content */
-}
-
-.banner img {
-  max-height: 50px; /* Adjust the size as needed */
-  width: auto; /* Keeps the aspect ratio */
 }
