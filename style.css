@@ -32,16 +32,16 @@ a[href^="tel"]:active,
 }
 
 
+
+
+
 /* Banner Styles */
 .banner {
   display: flex;
-  /* Enables flexbox */
   align-items: center;
-  /* Vertically centers the content */
-  justify-content: space-between;
-  /* Spreads out the content */
+  justify-content: flex-start;
+  /* Aligns items to the left */
   padding: 8px 16px;
-  /* Adjust padding as needed */
   /* Other styles */
   background-image: linear-gradient(to bottom, #005f73, #004853);
   /* Gradient as before */
@@ -59,11 +59,15 @@ a[href^="tel"]:active,
   /* Text shadow for legibility */
 }
 
-.banner-logo {
-  flex-shrink: 0;
-  /* Prevents the logo from shrinking */
-  margin-right: 16px;
-  /* Adds space between logo and the next content */
+.banner-logo img {
+  height: auto;
+  /* Maintains aspect ratio */
+  width: auto;
+  /* Maintains aspect ratio */
+  max-height: 60px;
+  /* Limits the size of the logo */
+  max-width: 100%;
+  /* Ensures the image is not wider than its container */
 }
 
 .banner img {
