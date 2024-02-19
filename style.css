@@ -32,53 +32,22 @@ a[href^="tel"]:active,
 }
 
 
-
-
-
 /* Banner Styles */
 .banner {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centers the content horizontally */
-    background-image: linear-gradient(to bottom, #005f73, #004853);
-    color: white;
-    padding: 8px 16px;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.banner-logo img {
-  height: auto;
-  /* Maintains aspect ratio */
-  width: auto;
-  /* Maintains aspect ratio */
-  max-height: 60px;
-  /* Limits the size of the logo */
-  max-width: 100%;
-  /* Ensures the image is not wider than its container */
-  background: none;
-  /* Ensures no background color */
-  /* Other styles */
-  margin-right: 20px;
-  /* Space between logo and text */
-  fill: white;
-  /* Set the color of the SVG */
-
-}
-
-.banner img {
-  max-height: 50px;
-  /* Adjust the size as needed */
-  width: auto;
-  /* Keeps the aspect ratio */
-}
-
-.banner-text {
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Gradient as before */
   color: white;
-  text-decoration: none;
-  margin-left: auto;
-  /* Pushes the text to the right on larger screens */
+  /* Text color */
+  text-align: center;
+  /* Center the text */
+  padding: 8px 0;
+  /* Reduced padding for a smaller banner */
+  font-size: 20px;
+  /* Adjust font size if needed */
+  font-weight: bold;
+  /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Text shadow for legibility */
 }
 
 .contact-info {
@@ -558,21 +527,4 @@ input[type="submit"]:hover {
   color: #9a8c98;
   /* Muted Lavender for hover */
   text-decoration: none;
-}
-
-/* Responsive adjustments for mobile */
-@media screen and (max-width: 767px) {
-  .banner {
-    justify-content: center;
-    /* Center content on mobile */
-  }
-
-  .banner-logo {
-    display: none;
-    /* Hide logo on smaller screens if desired */
-  }
-
-  .banner-text {
-    /* Additional styling for mobile if needed */
-  }
 }
