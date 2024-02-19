@@ -546,7 +546,7 @@ input[type="submit"]:hover {
 
 .marquee-content {
   white-space: nowrap;
-  min-width: 150%;
+  min-width: 300%;
   /* Reduced width */
   display: inline-block;
   animation: marquee 60s linear infinite;
@@ -581,8 +581,6 @@ input[type="submit"]:hover {
   100% {
     transform: translateX(-100%);
   }
-
-  /* Adjust to ensure continuous scroll */
 }
 
 @media screen and (max-width: 767px) {
@@ -596,7 +594,7 @@ input[type="submit"]:hover {
 
 @media screen and (max-width: 767px) {
   body {
-    padding: 0 10px;
+    padding: 0 5px;
     /* Less padding for smaller screens */
   }
 }
