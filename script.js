@@ -58,3 +58,39 @@ document.querySelector('.to-top').addEventListener('click', function(e) {
     behavior: 'smooth'
   });
 });
+
+// Example: Applying styles to the body element
+document.body.style.fontFamily = "'Roboto Slab', serif";
+document.body.style.margin = "0";
+document.body.style.padding = "0 20px";
+document.body.style.color = "#000000";
+document.body.style.backgroundColor = "#FFFFFF";
+document.body.style.textAlign = "center";
+document.body.style.letterSpacing = "0.5px";
+document.body.style.lineHeight = "1.8";
+
+// Example: Applying styles to the banner class
+var banners = document.getElementsByClassName("banner");
+for(var i = 0; i < banners.length; i++) {
+    banners[i].style.backgroundImage = "linear-gradient(to bottom, #005f73, #004853)";
+    banners[i].style.color = "white";
+    banners[i].style.textAlign = "center";
+    banners[i].style.padding = "8px 0";
+    banners[i].style.fontSize = "20px";
+    banners[i].style.fontWeight = "bold";
+    banners[i].style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.7)";
+}
+
+// Example: Applying responsive design using JavaScript
+window.addEventListener('resize', function() {
+    if(window.innerWidth <= 767) {
+        // Apply responsive styles here
+        var headerH1 = document.querySelector("header h1");
+        if(headerH1) {
+            headerH1.style.fontSize = "36px";
+            headerH1.style.marginTop = "-80px";
+        }
+    } else {
+        // Revert back to original styles if needed
+    }
+});
