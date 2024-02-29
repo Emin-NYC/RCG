@@ -1,133 +1,600 @@
+/* General Styles */
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  background-color: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center; /* Center text */
-}
-
-h1 {
-  color: #E20074; /* T-Mobile Magenta */
-  font-size: 28px; /* Larger font size */
-}
-
-#questionnaire {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0, 20px;
+  color: #000000;
+  /* Black text */
+  background-color: #FFFFFF;
+  /* White background */
   text-align: center;
-  width: 100%;
+  /* Ensures text is centered */
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+
 }
 
-
-.card {
-  background-color: white;
-  padding: 25px;
-  margin: 15px auto;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 600px;
-  width: calc(100% - 40px); /* Adjusted width */
-}
-
-.card button {
-  background-color: #E20074; /* T-Mobile Magenta */
+/* Override default link styles for phone numbers */
+a[href^="tel"],
+.contact-info {
   color: white;
-  padding: 12px 25px;
-  margin: 10px 5px;
+  /* Set the color to white */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+/* Ensuring the styles apply even when the link is visited or active */
+a[href^="tel"]:visited,
+a[href^="tel"]:active,
+.contact-info:visited,
+.contact-info:active {
+  color: white;
+}
+
+
+/* Banner Styles */
+.banner {
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Gradient as before */
+  color: white;
+  /* Text color */
+  text-align: center;
+  /* Center the text */
+  padding: 8px 0;
+  /* Reduced padding for a smaller banner */
+  font-size: 20px;
+  /* Adjust font size if needed */
+  font-weight: bold;
+  /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Text shadow for legibility */
+}
+
+.contact-info {
+  display: block;
+  /* This makes each span take a full line */
+  color: white;
+  /* Keeps the text color white */
+  text-decoration: none;
+  /* Removes any underline */
+}
+
+
+/* Hero Section */
+header {
+ background-image: linear-gradient(45deg, #ffdd55, #ffaa33);
+  /* Metallic gold gradient */
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Increased shadow intensity */
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  /* Slide in from top */
+}
+
+/* Apply the animation to header elements */
+header h1,
+header p {
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  color: #005f73;
+  /* Teal */
+  font-size: 46px;
+  /* Increase font size */
+  text-shadow: 1px 1px 2px #000000;
+  /* Black shadow */
+  margin-top: -20px;
+  word-wrap: break-word;
+
+}
+
+header p {
+  font-size: 28px;
+  /* Increase font size */
+  text-shadow: 2px 2px 4px #000000;
+  /* Black shadow for contrast */
+}
+
+.emphasis {
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  background-color: #c9ada7;
+  /* Soft Pink */
+  color: #283618;
+  /* Dark Olive - Adjust if needed for better contrast */
   border: none;
-  border-radius: 6px;
+  padding: 12px 25px;
   cursor: pointer;
   font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-.card button:hover {
-  background-color: #C10062; /* Darker Magenta */
-}
-
-.card select, .card input[type="number"] {
-  width: calc(100% - 24px);
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-#summaryArea {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin: 20px 0;
-  background-color: #fff;
-  width: calc(100% - 40px); /* Adjusted width */
-  max-width: 600px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-}
-
-footer button {
-  background-color: #004B93; /* T-Mobile Blue */
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-footer button:hover {
-  background-color: #003366; /* Darker Blue */
-}
-
-.neon-button {
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  background-color: #ff00ff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  /* Slightly larger font size */
+  font-weight: bold;
+  /* Make text bold */
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 
-              0 0 20px rgba(255, 0, 255, 0.7), 
-              0 0 30px rgba(255, 0, 255, 0.7);
-  animation: pulsate 2.5s infinite ease-in-out;
+  display: inline-block;
+  /* Center align button */
+  margin: 20px 0;
+  /* Spacing around buttons */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  /* Smooth transition for hover effects */
+  text-transform: uppercase;
+  /* Uppercase text */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* Adjusted for lighter shadow */
 }
 
-.neon-button:hover {
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 
-              0 0 30px rgba(255, 0, 255, 0.8), 
-              0 0 40px rgba(255, 0, 255, 0.8), 
-              0 0 50px rgba(255, 0, 255, 0.8), 
-              0 0 60px rgba(255, 0, 255, 0.8);
+button:hover {
+  background-color: #9a8c98;
+  /* Muted Lavender - Adjust if needed for better hover effect */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Shadow effect on hover for depth */
 }
 
-@media only screen and (max-width: 600px) {
-  .card, #summaryArea {
-    width: calc(100% - 40px);
-    margin: 10px;
+/* About Section */
+#about-us {
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
+  /* Subtle off-white gradient */
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+/* Services Section */
+#services {
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Subtle off-white gradient */
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.service-card {
+  background-color: white;
+  margin: 0 auto;
+  /* Center align card */
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-image: linear-gradient(to bottom, #9a8c98, #7c737e);
+  /* Subtle lavender gradient */
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.testimonial-card {
+  background-color: white;
+  margin: 0 auto;
+  /* Center align card */
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* Partnership Section */
+#partnership {
+  padding: 40px 20px;
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Subtle off-white gradient */
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+/* Footer */
+footer {
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Subtle teal gradient */
+  color: white;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add subtle shadow */
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Center align footer content */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+
+  .service-card,
+  .testimonial-card {
+    max-width: 100%;
   }
 
-  .card select, .card input[type="number"] {
-    width: calc(100% - 32px); /* Adjust for padding */
+  #about-us,
+  #services,
+  #testimonials,
+  #partnership,
+  footer {
+    border-radius: 0;
+    top: 0;
+  }
+}
+
+/* Keyframes for slide-in animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
   }
 
-  h1 {
-    font-size: 24px; /* Smaller font size on mobile */
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
-  .card button, footer button {
-    padding: 10px 20px; /* Adjust button padding for smaller screens */
-    font-size: 16px; /* Adjust button font size */
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Apply the animation to each section's heading and paragraph */
+#services h2,
+.service p,
+#testimonials h2,
+.testimonial p,
+#partnership h2,
+#partnership p {
+  /* Animation is set but not activated yet */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
+/* Initial state for section elements (hidden and positioned to the left) */
+#services,
+#testimonials,
+#partnership {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+  header h1 {
+    margin-top: -80px;
+    /* Reduced top margin for mobile */
+    /* Adjust the margin value as needed to bring the text closer to the banner */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 36px;
+    /* Smaller font size for smaller screens */
+  }
+}
+
+footer a[href^="tel"],
+footer .contact-info,
+footer a[href^="tel"]:visited,
+footer a[href^="tel"]:active,
+footer .contact-info:visited,
+footer .contact-info:active {
+  color: white;
+  /* Set the color to white */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+#discover-seminars {
+  font-size: 20px;
+  /* Increased font size for the text */
+  padding: 15px 30px;
+  /* Increased padding for a larger button */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black with opacity */
+}
+
+.modal-content {
+  background-color: #f2e9e4;
+  /* Subtle off-white gradient */
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  /* Soften the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add a box shadow */
+}
+
+/* New Media Query for Desktop Screens */
+@media screen and (min-width: 768px) {
+  .modal-content {
+    max-width: 600px;
+    /* Set a maximum width for larger screens */
+  }
+}
+
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #005f73;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #004853;
+}
+
+.modal .submit-button {
+  font-size: 20px;
+  /* Increase font size */
+  font-weight: bold;
+  /* Make text bold */
+  padding: 15px 30px;
+  /* Increase padding for a larger button */
+  background-color: #c9ada7;
+  /* Soft Pink for background */
+  color: #283618;
+  /* Dark Olive color for text */
+  border-radius: 5px;
+  /* Rounded corners */
+  border: none;
+  /* No border */
+  cursor: pointer;
+  /* Cursor changes to pointer on hover */
+  text-transform: uppercase;
+  /* Uppercase text */
+  transition: background-color 0.3s, box-shadow 0.3s;
+  /* Smooth transition effects */
+}
+
+.modal .submit-button:hover {
+  background-color: #9a8c98;
+  /* Darker shade for hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Shadow effect for depth on hover */
+}
+
+.modal label {
+  font-size: 18px;
+  /* Slightly smaller than the button text, but larger for visibility */
+  font-weight: bold;
+  /* Bold for better legibility */
+  color: #283618;
+  /* Dark Olive color for contrast */
+  margin-top: 15px;
+  /* Space above each label */
+  display: block;
+  /* Ensures the label takes its own line */
+}
+
+.to-top {
+  color: #c9ada7;
+  /* Soft Pink to match button colors */
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.to-top i {
+  margin-right: 5px;
+}
+
+.to-top:hover {
+  color: #9a8c98;
+  /* Muted Lavender for hover */
+  text-decoration: none;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #fff5e5, #ffe8cc);
+  /* Soft, warm gradient */
+  padding: 10px 0;
+  /* Padding for the marquee */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Increased bottom margin */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Optional: Adds a subtle shadow */
+}
+
+
+.marquee-content {
+  white-space: nowrap;
+  min-width: 300%;
+  /* Reduced width */
+  display: inline-block;
+  animation: marquee 60s linear infinite;
+  /* Slower animation */
+  -webkit-animation: marquee 60s linear infinite;
+  /* for Safari and Chrome */
+  -moz-animation: marquee 60s linear infinite;
+  /* for Firefox */
+  -o-animation: marquee 60s linear infinite;
+  /* for Opera */
+  -ms-animation: marquee 60s linear infinite;
+  /* for Internet Explorer */
+}
+
+/* Adjusting FontAwesome icon alignment */
+.marquee-content i.fas.fa-circle {
+  margin: 0 5px;
+  /* Add some spacing around icons */
+  font-size: 0.5em;
+  /* Adjust icon size as needed */
+  vertical-align: middle;
+  /* Center icon vertically with text */
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .marquee-content {
+    min-width: 150%;
+    /* Adjust for smaller screens */
+    animation: marquee 60s linear infinite;
+    /* Consistent slower animation for readability */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0 5px;
+    /* Less padding for smaller screens */
   }
 }
