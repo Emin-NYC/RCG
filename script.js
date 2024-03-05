@@ -53,8 +53,12 @@ window.onclick = function(event) {
 
 document.querySelector('.to-top').addEventListener('click', function(e) {
   e.preventDefault();
-  // Instead of just scrolling to the top, reload the page.
-  window.location.href = '/RCG/'; // Replace '/RCG/' with your actual page URL
+  // Scroll smoothly to the top of the page
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
 });
 
 
