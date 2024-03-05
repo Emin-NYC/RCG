@@ -53,11 +53,11 @@ window.onclick = function(event) {
 
 document.querySelector('.to-top').addEventListener('click', function(e) {
   e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  // Instead of just scrolling to the top, reload the page.
+  window.location.href = '/RCG/'; // Replace '/RCG/' with your actual page URL
 });
+
+
 
 // Example: Applying styles to the body element
 document.body.style.fontFamily = "'Roboto Slab', serif";
