@@ -123,7 +123,7 @@ button {
   /* Center align button */
   margin: 20px 0;
   /* Spacing around buttons */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s;
   /* Smooth transition for hover effects */
   text-transform: uppercase;
   /* Uppercase text */
@@ -138,7 +138,10 @@ button:hover {
   /* Slightly enlarge on hover */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   /* Shadow effect on hover for depth */
+  color: white; /* Text color changes to white */
+  font-size: 19px; /* Slightly increase the font size */
 }
+
 
 /* About Section */
 #about-us {
