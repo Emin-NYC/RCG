@@ -62,7 +62,7 @@ a[href^="tel"]:active,
 
 /* Hero Section */
 header {
-  background-image: radial-gradient(circle at top center, #ffdd55 40%, #ffaa33 100%);
+  background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
   color: white;
   padding: 100px 20px;
   position: relative;
@@ -73,12 +73,6 @@ header {
   animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
-/* Media query for larger screens */
-@media screen and (min-width: 768px) {
-  header {
-    background-image: radial-gradient(circle at top center, #ffdd55 50%, #ffaa33 100%);
-  }
-}
 
 
 /* Apply the animation to header elements */
