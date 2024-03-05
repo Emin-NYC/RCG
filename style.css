@@ -62,7 +62,7 @@ a[href^="tel"]:active,
 
 /* Hero Section */
 header {
- background-image: linear-gradient(45deg, #ffdd55, #ffaa33);
+background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
   /* Metallic gold gradient */
   color: white;
   padding: 100px 20px;
