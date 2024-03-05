@@ -600,3 +600,37 @@ input[type="submit"]:hover {
     /* Less padding for smaller screens */
   }
 }
+
+
+
+
+
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeftFirst {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeftSecond {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+
+/* Existing CSS... */
+
+/* Media Query for wide screens */
+@media screen and (min-width: 1612px) {
+  /* Apply animation to the 'About Us' section */
+  #about-us {
+    animation: slideInFromLeftFirst 1s ease-out forwards;
+  }
+
+  /* Apply animation to the 'Our Services' section with a delay */
+  #services {
+    animation: slideInFromLeftSecond 1s ease-out 0.5s forwards;
+  }
+}
+
+/* Rest of your existing CSS... */
