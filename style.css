@@ -62,18 +62,15 @@ a[href^="tel"]:active,
 
 /* Hero Section */
 header {
-background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
-  /* Metallic gold gradient */
+  background-image: radial-gradient(circle at top center, #ffdd55 30%, #ffaa33 70%);
   color: white;
   padding: 100px 20px;
   position: relative;
   z-index: 1;
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  /* Increased shadow intensity */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   animation: 1s ease-out 0s 1 slideInFromTop;
-  /* Slide in from top */
 }
 
 /* Apply the animation to header elements */
