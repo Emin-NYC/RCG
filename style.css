@@ -147,42 +147,35 @@ button {
 }
 
 button:hover {
-  background-color: #9a8c98;
-  /* Muted Lavender - Adjust if needed for better hover effect */
-  transform: scale(1.1);
-  /* Slightly enlarge on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-  /* Shadow effect on hover for depth */
-  color: white; /* Text color changes to white */
-  font-size: 19px; /* Slightly increase the font size */
+  background-color: #9a8c98; /* Muted Lavender */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for better depth */
+  color: white; /* High contrast text color */
 }
+
 
 
 @keyframes fadeToWhite {
   from {
     color: #283618; /* Original color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sharper shadow for clarity */
   }
   to {
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Maintain sharpness */
   }
 }
 
 .fade-to-white {
-  animation: fadeToWhite 3s forwards;
+  animation: fadeToWhite 2s forwards; /* Shorter duration */
 }
 
-/* Ensuring the fade effect starts after 2 seconds */
-.fade-to-white {
-  animation-delay: 3s;
-}
-
+/* Starting animation 1 second after page load for quick visibility */
 @media screen and (max-width: 767px) {
   .fade-to-white {
-    animation: fadeToWhite 3s forwards 3s; /* Starts after 2 seconds */
+    animation: fadeToWhite 2s forwards 3s; /* Starts after 1 second */
   }
 }
+
 
 
 
