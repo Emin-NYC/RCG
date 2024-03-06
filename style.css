@@ -696,10 +696,10 @@ button#discover-seminars:hover {
   color: white;
 }
 
-/* Smaller button size for mobile devices */
+/* Slightly larger button size for mobile devices */
 @media screen and (max-width: 767px) {
   button#discover-seminars {
-    padding: 10px 20px; /* Smaller padding for mobile */
-    font-size: 16px; /* Smaller font size for mobile */
+    padding: 12px 22px; /* Slightly larger padding for mobile */
+    font-size: 17px; /* Slightly larger font size for mobile */
   }
 }
