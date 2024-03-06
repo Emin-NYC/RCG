@@ -152,7 +152,7 @@ button:hover {
   /* Muted Lavender - Adjust if needed for better hover effect */
   transform: scale(1.1);
   /* Slightly enlarge on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
   /* Shadow effect on hover for depth */
   color: white; /* Text color changes to white */
   font-size: 19px; /* Slightly increase the font size */
@@ -166,7 +166,7 @@ button:hover {
   }
   to {
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow */
   }
 }
 
