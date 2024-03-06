@@ -111,11 +111,10 @@ header h1 {
 }
 
 header p {
-  font-size: 28px;
-  /* Increase font size */
-  text-shadow: 2px 2px 4px #000000;
-  /* Black shadow for contrast */
+  font-size: 28px; /* Keep the current font size */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sharp and distinct black shadow */
 }
+
 
 .emphasis {
   font-weight: bold;
