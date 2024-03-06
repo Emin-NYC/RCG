@@ -672,34 +672,34 @@ input[type="submit"]:hover {
 
 
 
+/* Styles for "Explore Our Seminars" button */
 button#discover-seminars {
   background-color: #c9ada7; /* Soft Pink */
   color: #283618; /* Dark Olive */
   border: none;
-  padding: 15px 30px; /* Increased padding */
+  padding: 12px 25px; /* Padding for larger screens */
   cursor: pointer;
-  font-size: 20px; /* Increased font size */
+  font-size: 18px; /* Font size for larger screens */
   font-weight: bold;
   border-radius: 5px;
   display: inline-block;
   margin: 20px 0;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); /* Slight shadow for text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for button */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 button#discover-seminars:hover {
   background-color: #9a8c98; /* Muted Lavender */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* More prominent shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
   color: white;
-  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Media query for larger screens */
-@media screen and (min-width: 768px) {
+/* Smaller button size for mobile devices */
+@media screen and (max-width: 767px) {
   button#discover-seminars {
-    font-size: 22px; /* Even larger font size */
-    padding: 18px 35px; /* Even more padding */
+    padding: 10px 20px; /* Smaller padding for mobile */
+    font-size: 16px; /* Smaller font size for mobile */
   }
 }
