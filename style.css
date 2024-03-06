@@ -8,22 +8,20 @@ body {
   background-color: #FFFFFF;
   /* White background */
   text-align: center;
-  /* Ensures text is centered */
+  /* Centers text */
   letter-spacing: 0.5px;
   line-height: 1.8;
-
 }
 
-/* Override default link styles for phone numbers */
+/* Link Styles for Phone Numbers */
 a[href^="tel"],
 .contact-info {
   color: white;
-  /* Set the color to white */
   text-decoration: none;
-  /* Remove underline */
+  /* Removes underline */
 }
 
-/* Ensuring the styles apply even when the link is visited or active */
+/* Link Styles for Visited or Active States */
 a[href^="tel"]:visited,
 a[href^="tel"]:active,
 .contact-info:visited,
@@ -31,36 +29,26 @@ a[href^="tel"]:active,
   color: white;
 }
 
-
 /* Banner Styles */
 .banner {
   background-image: linear-gradient(to bottom, #005f73, #004853);
-  /* Gradient as before */
   color: white;
-  /* Text color */
   text-align: center;
-  /* Center the text */
   padding: 8px 0;
-  /* Reduced padding for a smaller banner */
   font-size: 20px;
-  /* Adjust font size if needed */
   font-weight: bold;
-  /* Bold text */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  /* Text shadow for legibility */
+  /* Shadow for legibility */
 }
 
 .contact-info {
   display: block;
-  /* This makes each span take a full line */
+  /* Each span takes a full line */
   color: white;
-  /* Keeps the text color white */
   text-decoration: none;
-  /* Removes any underline */
 }
 
-
-/* Hero Section */
+/* Hero Section Styles */
 header {
   background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
   color: white;
@@ -71,10 +59,11 @@ header {
   border-bottom-right-radius: 50% 20%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   animation: 1s ease-out 0s 1 slideInFromTop;
-  overflow: hidden; /* Make sure the pseudo-element is contained within the header */
+  overflow: hidden;
+  /* Contains pseudo-element within header */
 }
 
-/* Pseudo-element for shading */
+/* Pseudo-element for Header Shading */
 header::before {
   content: '';
   position: absolute;
@@ -82,16 +71,12 @@ header::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.04); /* Semi-transparent black background */
-  z-index: -1; /* Ensure it sits behind the text */
+  background: rgba(0, 0, 0, 0.04);
+  z-index: -1;
+  /* Sits behind the text */
 }
 
-
-
-
-
-
-/* Apply the animation to header elements */
+/* Header Animations */
 header h1,
 header p {
   animation: 1s ease-out 0s 1 slideInFromTop;
@@ -102,135 +87,132 @@ header h1 {
   color: #005f73;
   /* Teal */
   font-size: 46px;
-  /* Increase font size */
   text-shadow: 1px 1px 2px #000000;
   /* Black shadow */
   margin-top: -20px;
   word-wrap: break-word;
-
 }
 
 header p {
-  font-size: 28px; /* Keep the current font size */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); /* Sharp and distinct black shadow */
+  font-size: 28px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  /* Enhanced shadow */
 }
 
-
+/* Emphasis Style */
 .emphasis {
   font-weight: bold;
 }
 
-/* Buttons */
+/* Button Styles */
 button {
   background-color: #c9ada7;
   /* Soft Pink */
   color: #283618;
-  /* Dark Olive - Adjust if needed for better contrast */
+  /* Dark Olive */
   border: none;
   padding: 12px 25px;
   cursor: pointer;
   font-size: 18px;
-  /* Slightly larger font size */
+  /* Larger font size */
   font-weight: bold;
-  /* Make text bold */
   border-radius: 5px;
   display: inline-block;
-  /* Center align button */
   margin: 20px 0;
-  /* Spacing around buttons */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s;
-  /* Smooth transition for hover effects */
   text-transform: uppercase;
-  /* Uppercase text */
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  /* Adjusted for lighter shadow */
+  /* Lighter shadow */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s;
+  /* Smooth transitions */
 }
 
 button:hover {
-  background-color: #9a8c98; /* Muted Lavender */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for better depth */
-  color: white; /* High contrast text color */
+  background-color: #9a8c98;
+  /* Muted Lavender */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow */
+  color: white;
 }
 
-
-
+/* Text Fading Animation */
 @keyframes fadeToWhite {
   from {
-    color: #283618; /* Original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sharper shadow for clarity */
+    color: #283618;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   }
+
   to {
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Maintain sharpness */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   }
 }
 
 .fade-to-white {
-  animation: fadeToWhite 2s forwards; /* Shorter duration */
+  animation: fadeToWhite 2s forwards;
+  /* Shortened duration */
 }
 
-/* Starting animation 1 second after page load for quick visibility */
+/* Mobile-Specific Styles */
 @media screen and (max-width: 767px) {
   .fade-to-white {
-    animation: fadeToWhite 2s forwards 3s; /* Starts after 1 second */
+    animation: fadeToWhite 2s forwards 1s;
+    /* Starts after 1 second */
+  }
+
+  header h1 {
+    margin-top: -80px;
+    /* Reduced top margin */
+    font-size: 36px;
+    /* Smaller font size */
+  }
+
+  .marquee-content {
+    min-width: 150%;
+    animation: marquee 60s linear infinite;
+    /* Consistent animation speed */
+  }
+
+  body {
+    padding: 0 5px;
+    /* Reduced padding */
+  }
+
+  button#discover-seminars {
+    padding: 12px 22px;
+    /* Increased padding */
+    font-size: 17px;
+    /* Larger font size */
   }
 }
 
-
-
-
-
-/* About Section */
-#about-us {
+/* Section Styles */
+#about-us,
+#services,
+#testimonials,
+#partnership {
   padding: 40px 20px;
-  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
-  /* Subtle off-white gradient */
   position: relative;
   z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#about-us {
+  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
   border-top-left-radius: 50% 20%;
   border-top-right-radius: 50% 20%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Add subtle shadow */
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation: slideInFromLeft 1s ease-out;
 }
 
-/* Services Section */
-#services {
-  padding: 40px 20px;
+#services,
+#testimonials,
+#partnership {
   background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
-  /* Subtle off-white gradient */
-  position: relative;
-  z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Add subtle shadow */
 }
 
-.service-card {
-  background-color: white;
-  margin: 0 auto;
-  /* Center align card */
-  max-width: 300px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-}
-
-/* Testimonials Section */
-#testimonials {
-  background-image: linear-gradient(to bottom, #9a8c98, #7c737e);
-  /* Subtle lavender gradient */
-  padding: 40px 20px;
-  position: relative;
-  z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Add subtle shadow */
-}
-
+.service-card,
 .testimonial-card {
   background-color: white;
   margin: 0 auto;
-  /* Center align card */
   max-width: 300px;
   padding: 20px;
   border-radius: 10px;
@@ -238,224 +220,44 @@ button:hover {
   margin-bottom: 30px;
 }
 
-/* Partnership Section */
-#partnership {
-  padding: 40px 20px;
-  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
-  /* Subtle off-white gradient */
-  position: relative;
-  z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Add subtle shadow */
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
   background-image: linear-gradient(to bottom, #005f73, #004853);
-  /* Subtle teal gradient */
   color: white;
   padding: 40px 20px;
   position: relative;
   z-index: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Add subtle shadow */
 }
 
 .footer-content {
   max-width: 800px;
   margin: 0 auto;
-  /* Center align footer content */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 767px) {
-
-  .service-card,
-  .testimonial-card {
-    max-width: 100%;
-  }
-
-  #about-us,
-  #services,
-  #testimonials,
-  #partnership,
-  footer {
-    border-radius: 0;
-    top: 0;
-  }
-}
-
-/* Keyframes for slide-in animations */
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
-/* Apply the animation to each section's heading and paragraph */
-#services h2,
-.service p,
-#testimonials h2,
-.testimonial p,
-#partnership h2,
-#partnership p {
-  /* Animation is set but not activated yet */
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
-
-/* Initial state for section elements (hidden and positioned to the left) */
-#services,
-#testimonials,
-#partnership {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-/* Media query for mobile devices */
-@media screen and (max-width: 767px) {
-  header h1 {
-    margin-top: -80px;
-    /* Reduced top margin for mobile */
-    /* Adjust the margin value as needed to bring the text closer to the banner */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  header h1 {
-    font-size: 36px;
-    /* Smaller font size for smaller screens */
-  }
-}
-
-footer a[href^="tel"],
-footer .contact-info,
-footer a[href^="tel"]:visited,
-footer a[href^="tel"]:active,
-footer .contact-info:visited,
-footer .contact-info:active {
-  color: white;
-  /* Set the color to white */
-  text-decoration: none;
-  /* Remove underline */
-}
-
-#discover-seminars {
-  font-size: 20px;
-  /* Increased font size for the text */
-  padding: 15px 30px;
-  /* Increased padding for a larger button */
 }
 
 /* Modal Styles */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
-/* Modal Content */
+.modal,
 .modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
-}
-
-/* Close Button */
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black with opacity */
 }
 
 .modal-content {
   background-color: #f2e9e4;
-  /* Subtle off-white gradient */
   margin: 15% auto;
-  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  /* Could be more or less, depending on screen size */
   border-radius: 10px;
-  /* Soften the edges */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Add a box shadow */
 }
-
-/* New Media Query for Desktop Screens */
-@media screen and (min-width: 768px) {
-  .modal-content {
-    max-width: 600px;
-    /* Set a maximum width for larger screens */
-  }
-}
-
 
 .close-button {
   color: #aaa;
@@ -506,50 +308,33 @@ input[type="submit"]:hover {
 
 .modal .submit-button {
   font-size: 20px;
-  /* Increase font size */
   font-weight: bold;
-  /* Make text bold */
   padding: 15px 30px;
-  /* Increase padding for a larger button */
   background-color: #c9ada7;
-  /* Soft Pink for background */
   color: #283618;
-  /* Dark Olive color for text */
   border-radius: 5px;
-  /* Rounded corners */
   border: none;
-  /* No border */
   cursor: pointer;
-  /* Cursor changes to pointer on hover */
   text-transform: uppercase;
-  /* Uppercase text */
   transition: background-color 0.3s, box-shadow 0.3s;
-  /* Smooth transition effects */
 }
 
 .modal .submit-button:hover {
   background-color: #9a8c98;
-  /* Darker shade for hover */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* Shadow effect for depth on hover */
 }
 
 .modal label {
   font-size: 18px;
-  /* Slightly smaller than the button text, but larger for visibility */
   font-weight: bold;
-  /* Bold for better legibility */
   color: #283618;
-  /* Dark Olive color for contrast */
   margin-top: 15px;
-  /* Space above each label */
   display: block;
-  /* Ensures the label takes its own line */
 }
 
+/* "To Top" Button Styles */
 .to-top {
   color: #c9ada7;
-  /* Soft Pink to match button colors */
   text-decoration: none;
   display: inline-block;
   margin-top: 20px;
@@ -564,142 +349,133 @@ input[type="submit"]:hover {
 
 .to-top:hover {
   color: #9a8c98;
-  /* Muted Lavender for hover */
-  text-decoration: none;
 }
 
+/* Marquee Styles */
 .marquee {
   width: 100%;
   overflow: hidden;
   background: linear-gradient(to right, #fff5e5, #ffe8cc);
-  /* Soft, warm gradient */
   padding: 10px 0;
-  /* Padding for the marquee */
   margin-top: 20px;
   margin-bottom: 20px;
-  /* Increased bottom margin */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Optional: Adds a subtle shadow */
 }
-
 
 .marquee-content {
   white-space: nowrap;
   min-width: 300%;
-  /* Reduced width */
   display: inline-block;
   animation: marquee 60s linear infinite;
-  /* Slower animation */
   -webkit-animation: marquee 60s linear infinite;
-  /* for Safari and Chrome */
+  /* For Safari and Chrome */
   -moz-animation: marquee 60s linear infinite;
-  /* for Firefox */
+  /* For Firefox */
   -o-animation: marquee 60s linear infinite;
-  /* for Opera */
+  /* For Opera */
   -ms-animation: marquee 60s linear infinite;
-  /* for Internet Explorer */
+  /* For Internet Explorer */
 }
 
-/* Adjusting FontAwesome icon alignment */
 .marquee-content i.fas.fa-circle {
   margin: 0 5px;
-  /* Add some spacing around icons */
   font-size: 0.5em;
-  /* Adjust icon size as needed */
   vertical-align: middle;
-  /* Center icon vertically with text */
 }
 
-
-
-@keyframes marquee {
+/* Keyframes for Slide-in Animations */
+@keyframes slideInFromLeftFirst {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0);
+    opacity: 1;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .marquee-content {
-    min-width: 150%;
-    /* Adjust for smaller screens */
-    animation: marquee 60s linear infinite;
-    /* Consistent slower animation for readability */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  body {
-    padding: 0 5px;
-    /* Less padding for smaller screens */
-  }
-}
-
-
-
-
-
-
-/* Keyframes for sliding in from the left */
-@keyframes slideInFromLeftFirst {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInFromLeftSecond {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-
-
-/* Media Query for wide screens */
+/* Wide Screen Specific Styles */
 @media screen and (min-width: 1612px) {
-  /* Apply animation to the 'About Us' section */
   #about-us {
     animation: slideInFromLeftFirst 1s ease-out forwards;
   }
 
-  /* Apply animation to the 'Our Services' section with a delay */
   #services {
     animation: slideInFromLeftSecond 1s ease-out 0.5s forwards;
+  }
+
+  .modal-content {
+    max-width: 600px;
+    /* Maximum width for larger screens */
   }
 }
 
 
 
 
-/* Styles for "Explore Our Seminars" button */
 button#discover-seminars {
-  background-color: #c9ada7; /* Soft Pink */
-  color: #283618; /* Dark Olive */
+  background-color: #c9ada7;
+  /* Soft Pink */
+  color: #283618;
+  /* Dark Olive */
   border: none;
-  padding: 12px 25px; /* Padding for larger screens */
+  padding: 15px 30px;
+  /* Increased padding */
   cursor: pointer;
-  font-size: 18px; /* Font size for larger screens */
+  font-size: 20px;
+  /* Increased font size */
   font-weight: bold;
   border-radius: 5px;
   display: inline-block;
   margin: 20px 0;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* Slight shadow for text */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  /* Shadow for button */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
 }
 
 button#discover-seminars:hover {
-  background-color: #9a8c98; /* Muted Lavender */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  background-color: #9a8c98;
+  /* Muted Lavender */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  /* More prominent shadow on hover */
   color: white;
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
 }
 
 /* Slightly larger button size for mobile devices */
 @media screen and (max-width: 767px) {
   button#discover-seminars {
-    padding: 12px 22px; /* Slightly larger padding for mobile */
-    font-size: 17px; /* Slightly larger font size for mobile */
+    padding: 12px 22px;
+    /* Slightly larger padding for mobile */
+    font-size: 20px;
+    /* Slightly larger font size for mobile */
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  button#discover-seminars {
+    font-size: 20px;
+    /* Even larger font size */
+    padding: 18px 35px;
+    /* Even more padding */
   }
 }
