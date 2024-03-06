@@ -727,7 +727,7 @@ button#discover-seminars:hover {
 
 @media screen and (max-width: 767px) {
   header p {
-    padding-top: 15px; /* Increase top padding */
-    padding-bottom: 15px; /* Increase bottom padding */
+    padding-top: 10px; /* Increase top padding */
+    padding-bottom: 10px; /* Increase bottom padding */
   }
 }
