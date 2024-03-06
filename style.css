@@ -159,6 +159,35 @@ button:hover {
 }
 
 
+@keyframes fadeToWhite {
+  from {
+    color: #283618; /* Original color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  to {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+  }
+}
+
+.fade-to-white {
+  animation: fadeToWhite 3s forwards;
+}
+
+/* Ensuring the fade effect starts after 2 seconds */
+.fade-to-white {
+  animation-delay: 3s;
+}
+
+@media screen and (max-width: 767px) {
+  .fade-to-white {
+    animation: fadeToWhite 3s forwards 3s; /* Starts after 2 seconds */
+  }
+}
+
+
+
+
 /* About Section */
 #about-us {
   padding: 40px 20px;
