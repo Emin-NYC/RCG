@@ -82,7 +82,7 @@ header::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.05); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.02); /* Semi-transparent black background */
   z-index: -1; /* Ensure it sits behind the text */
 }
 
