@@ -711,7 +711,7 @@ button#discover-seminars:hover {
   button#discover-seminars {
     padding: 12px 22px;
     /* Slightly larger padding for mobile */
-    font-size: 20px;
+    font-size: 22px;
     /* Slightly larger font size for mobile */
   }
 }
