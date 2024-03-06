@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // This checks if the screen width is 767px or less
+  if (window.innerWidth <= 767) {
+    var discoverSeminarsButton = document.getElementById('discover-seminars');
+    // Add the class that starts the animation
+    discoverSeminarsButton.classList.add('fade-to-white');
+  }
+});
+
 document.getElementById('discover-seminars').addEventListener('click', function() {
   window.location.href = '#services'; // Scrolls to the services section
 });
