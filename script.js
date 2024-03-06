@@ -53,10 +53,8 @@ window.onclick = function(event) {
 
 document.querySelector('.to-top').addEventListener('click', function(e) {
   e.preventDefault();
-  // Scroll smoothly to the top of the page
   window.scrollTo({
     top: 0,
-    left: 0,
     behavior: 'smooth'
   });
 });
