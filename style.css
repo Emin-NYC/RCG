@@ -112,7 +112,7 @@ header h1 {
 
 header p {
   font-size: 28px; /* Keep the current font size */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sharp and distinct black shadow */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); /* Sharp and distinct black shadow */
 }
 
 
