@@ -1,5 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
   let backToTopButton = document.querySelector('.to-top');
+  let footer = document.querySelector('footer');
+  let servicesSection = document.getElementById('services');
+  let windowHeight = window.innerHeight;
+
+  window.addEventListener('scroll', () => {
+    let servicesPosition = servicesSection.getBoundingClientRect().top;
+    let footerPosition = footer.getBoundingClientRect().top;
+
+    // Check if the 'Back to Top' button is overlapping with the footer
+    if (footerPosition < windowHeight) {
+      backToTopButton.classList.add('white-text'); // Change text color to white
+    } else {
+      backToTopButton.classList.remove('white-text'); // Revert text color
+    }
+
+    // Show or hide the button based on services section
+    if (servicesPosition < windowHeight / 2) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let backToTopButton = document.querySelector('.to-top');
   let aboutUsSection = document.getElementById('services');
   let windowHeight = window.innerHeight;
 
