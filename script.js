@@ -4,16 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
   let servicesSection = document.getElementById('services');
   let windowHeight = window.innerHeight;
 
-  window.addEventListener('scroll', () => {
+  function updateButtonAppearance() {
     let footerRect = footer.getBoundingClientRect();
     let buttonRect = backToTopButton.getBoundingClientRect();
 
-    // Check if the 'Back to Top' button overlaps with the footer
+    // Change text color based on button's position relative to the footer
     if (buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom) {
       backToTopButton.classList.add('white-text'); // Change text color to white
     } else {
-      backToTopButton.classList.remove('white-text'); // Revert text color
+      backToTopButton.classList.remove('white-text'); // Revert text color to black
     }
+  }
+
+  window.addEventListener('scroll', () => {
+    // Update button appearance on scroll
+    updateButtonAppearance();
 
     // Fade in or out the button based on services section position
     let servicesPosition = servicesSection.getBoundingClientRect().top;
@@ -23,7 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
       backToTopButton.classList.remove('visible');
     }
   });
+
+  // Update button appearance when clicked
+  backToTopButton.addEventListener('click', function() {
+    // Smooth scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+    // Update appearance after scrolling
+    setTimeout(updateButtonAppearance, 300); // Adjust delay as needed
+  });
 });
+
 
 
 
