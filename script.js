@@ -1,3 +1,12 @@
+function updateButtonAppearance() {
+    let footerRect = footer.getBoundingClientRect();
+    let buttonRect = backToTopButton.getBoundingClientRect();
+
+    // Toggle 'white-text' class based on button's position relative to the footer
+    backToTopButton.classList.toggle('white-text', buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom);
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
   let backToTopButton = document.querySelector('.to-top');
   let footer = document.querySelector('footer');
