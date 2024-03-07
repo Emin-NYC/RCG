@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', function() {
+  let backToTopButton = document.querySelector('.to-top');
+  let aboutUsSection = document.getElementById('about-us');
+  let windowHeight = window.innerHeight;
+
+  window.addEventListener('scroll', () => {
+    let aboutUsPosition = aboutUsSection.getBoundingClientRect().top;
+
+    if (aboutUsPosition < windowHeight / 2) {
+      backToTopButton.classList.add('visible'); // Fade in
+    } else {
+      backToTopButton.classList.remove('visible'); // Fade out
+    }
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
   // This checks if the screen width is 767px or less
   if (window.innerWidth <= 767) {
