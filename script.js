@@ -5,17 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
   let windowHeight = window.innerHeight;
 
   window.addEventListener('scroll', () => {
-    let servicesPosition = servicesSection.getBoundingClientRect().top;
-    let footerPosition = footer.getBoundingClientRect().top;
+    let footerRect = footer.getBoundingClientRect();
+    let buttonRect = backToTopButton.getBoundingClientRect();
 
-    // Check if the 'Back to Top' button is overlapping with the footer
-    if (footerPosition < windowHeight) {
+    // Check if the 'Back to Top' button overlaps with the footer
+    if (buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom) {
       backToTopButton.classList.add('white-text'); // Change text color to white
     } else {
       backToTopButton.classList.remove('white-text'); // Revert text color
     }
 
-    // Show or hide the button based on services section
+    // Fade in or out the button based on services section position
+    let servicesPosition = servicesSection.getBoundingClientRect().top;
     if (servicesPosition < windowHeight / 2) {
       backToTopButton.classList.add('visible');
     } else {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
