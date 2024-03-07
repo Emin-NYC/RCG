@@ -576,6 +576,12 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 
+.to-top:active {
+    color: #283618; /* This should be the original text color of the button */
+    background-color: #c9ada7; /* This should be the original background color of the button */
+}
+
+
 .marquee {
   width: 100%;
   overflow: hidden;
