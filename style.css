@@ -777,5 +777,10 @@ button#discover-seminars:hover {
   .to-top i {
     vertical-align: middle;
   }
+
+    .to-top.white-text {
+    color: white;
+    /* Only changes the text color */
+  }
 }
 
