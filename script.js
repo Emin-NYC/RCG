@@ -24,9 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-document.getElementById('discover-seminars').addEventListener('click', function() {
-  window.location.href = '#services'; // Scrolls to the services section
+document.getElementById('discover-seminars').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default action
+  const servicesSection = document.getElementById('services');
+  servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
 
 document.getElementById('contact-us').addEventListener('click', function() {
   window.location.href = '#contact-info'; // Scrolls to the contact information section
