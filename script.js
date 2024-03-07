@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   let backToTopButton = document.querySelector('.to-top');
-  let aboutUsSection = document.getElementById('about-us');
+  let aboutUsSection = document.getElementById('services');
   let windowHeight = window.innerHeight;
 
   window.addEventListener('scroll', () => {
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
