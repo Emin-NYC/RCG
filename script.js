@@ -1,175 +1,114 @@
-function updateButtonAppearance() {
-    let footerRect = footer.getBoundingClientRect();
-    let buttonRect = backToTopButton.getBoundingClientRect();
-
-    // Toggle 'white-text' class based on button's position relative to the footer
-    backToTopButton.classList.toggle('white-text', buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom);
-}
-
-
 document.addEventListener('DOMContentLoaded', function() {
-  let backToTopButton = document.querySelector('.to-top');
-  let footer = document.querySelector('footer');
-  let servicesSection = document.getElementById('services');
-  let windowHeight = window.innerHeight;
+    // Back to Top button functionality
+    const backToTopButton = document.querySelector('.to-top');
+    backToTopButton.style.opacity = '0'; // Initially hide the button
+    backToTopButton.style.visibility = 'hidden';
 
-  function updateButtonAppearance() {
-    let footerRect = footer.getBoundingClientRect();
-    let buttonRect = backToTopButton.getBoundingClientRect();
+    // Function to handle Back to Top button visibility
+    function checkButtonVisibility() {
+        const aboutUsSection = document.getElementById('about-us');
+        const footer = document.querySelector('footer');
+        const aboutUsPosition = aboutUsSection.getBoundingClientRect().bottom;
+        const footerPosition = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-    // Change text color based on button's position relative to the footer
-    if (buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom) {
-      backToTopButton.classList.add('white-text'); // Change text color to white
-    } else {
-      backToTopButton.classList.remove('white-text'); // Revert text color to black
+        // Show button when user scrolls past 'About Us' section and hide when the footer is visible
+        if (window.scrollY > aboutUsPosition && footerPosition > windowHeight) {
+            backToTopButton.style.opacity = '1';
+            backToTopButton.style.visibility = 'visible';
+        } else {
+            backToTopButton.style.opacity = '0';
+            backToTopButton.style.visibility = 'hidden';
+        }
     }
-  }
 
-  window.addEventListener('scroll', () => {
-    // Update button appearance on scroll
-    updateButtonAppearance();
+    // Event listener for scrolling
+    window.addEventListener('scroll', checkButtonVisibility);
 
-    // Fade in or out the button based on services section position
-    let servicesPosition = servicesSection.getBoundingClientRect().top;
-    if (servicesPosition < windowHeight / 2) {
-      backToTopButton.classList.add('visible');
-    } else {
-      backToTopButton.classList.remove('visible');
-    }
-  });
-
-  // Update button appearance when clicked
-  backToTopButton.addEventListener('click', function() {
-    // Smooth scroll to top
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    // Event listener for Back to Top button click
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Update appearance after scrolling
-    setTimeout(updateButtonAppearance, 300); // Adjust delay as needed
-  });
-});
+    // Discover Seminars button smooth scrolling
+    document.getElementById('discover-seminars').addEventListener('click', function(event) {
+        event.preventDefault();
+        const servicesSection = document.getElementById('services');
+        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 
+    // Contact Us button - Scroll to contact information section
+    document.getElementById('contact-us').addEventListener('click', function() {
+        window.location.href = '#contact-info';
+    });
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  let backToTopButton = document.querySelector('.to-top');
-  let aboutUsSection = document.getElementById('services');
-  let windowHeight = window.innerHeight;
-
-  window.addEventListener('scroll', () => {
-    let aboutUsPosition = aboutUsSection.getBoundingClientRect().top;
-
-    if (aboutUsPosition < windowHeight / 2) {
-      backToTopButton.classList.add('visible'); // Fade in
-    } else {
-      backToTopButton.classList.remove('visible'); // Fade out
-    }
-  });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  // This checks if the screen width is 767px or less
-  if (window.innerWidth <= 767) {
-    var discoverSeminarsButton = document.getElementById('discover-seminars');
-    // Add the class that starts the animation
-    discoverSeminarsButton.classList.add('fade-to-white');
-  }
-});
-
-document.getElementById('discover-seminars').addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent default action
-  const servicesSection = document.getElementById('services');
-  servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
-
-document.getElementById('contact-us').addEventListener('click', function() {
-  window.location.href = '#contact-info'; // Scrolls to the contact information section
-});
-
-// Scroll-triggered animation for sections
-document.addEventListener('DOMContentLoaded', (event) => {
-  const sections = document.querySelectorAll('#about-us, #services, #testimonials, #partnership');
-
-  sections.forEach(section => {
-    section.dataset.animated = 'false'; // Initialize the animation flag as false
-  });
-
-  window.addEventListener('scroll', () => {
+    // Scroll-triggered animation for sections
+    const sections = document.querySelectorAll('#about-us, #services, #testimonials, #partnership');
     sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (sectionTop < windowHeight - 100 && section.dataset.animated === 'false') {
-        section.style.opacity = '1';
-        section.style.transform = 'translateX(0)';
-        section.style.animation = '1s ease-out 0s 1 slideInFromLeft';
-        section.dataset.animated = 'true'; // Mark as animated
-      }
+        section.dataset.animated = 'false'; // Initialize the animation flag as false
     });
-  });
-});
 
-// Modal functionality
-var modal = document.getElementById("contactModal");
-var btn = document.getElementById("contact-us");
-var span = document.getElementsByClassName("close-button")[0];
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+            if (sectionTop < windowHeight - 100 && section.dataset.animated === 'false') {
+                section.style.opacity = '1';
+                section.style.transform = 'translateX(0)';
+                section.style.animation = '1s ease-out 0s 1 slideInFromLeft';
+                section.dataset.animated = 'true'; // Mark as animated
+            }
+        });
+    });
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // Modal functionality for contact form
+    const modal = document.getElementById("contactModal");
+    const modalBtn = document.getElementById("contact-us");
+    const closeModalBtn = document.getElementsByClassName("close-button")[0];
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    modalBtn.onclick = function() {
+        modal.style.display = "block";
+    }
 
-// Back to Top functionality
-document.querySelector('.to-top').addEventListener('click', function(e) {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+    closeModalBtn.onclick = function() {
+        modal.style.display = "none";
+    }
 
-// Dynamic styling using JavaScript
-document.body.style.fontFamily = "'Roboto Slab', serif";
-document.body.style.margin = "0";
-document.body.style.padding = "0 20px";
-document.body.style.color = "#000000";
-document.body.style.backgroundColor = "#FFFFFF";
-document.body.style.textAlign = "center";
-document.body.style.letterSpacing = "0.5px";
-document.body.style.lineHeight = "1.8";
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
-var banners = document.getElementsByClassName("banner");
-for(var i = 0; i < banners.length; i++) {
-    banners[i].style.backgroundImage = "linear-gradient(to bottom, #005f73, #004853)";
-    banners[i].style.color = "white";
-    banners[i].style.textAlign = "center";
-    banners[i].style.padding = "8px 0";
-    banners[i].style.fontSize = "20px";
-    banners[i].style.fontWeight = "bold";
-    banners[i].style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.7)";
-}
+    // Dynamic styling using JavaScript
+    document.body.style.fontFamily = "'Roboto Slab', serif";
+    document.body.style.margin = "0";
+    document.body.style.padding = "0 20px";
+    document.body.style.color = "#000000";
+    document.body.style.backgroundColor = "#FFFFFF";
+    document.body.style.textAlign = "center";
+    document.body.style.letterSpacing = "0.5px";
+    document.body.style.lineHeight = "1.8";
 
-window.addEventListener('resize', function() {
-    if(window.innerWidth <= 767) {
-        var headerH1 = document.querySelector("header h1");
-        if(headerH1) {
+    const banners = document.getElementsByClassName("banner");
+    for(let i = 0; i < banners.length; i++) {
+        banners[i].style.backgroundImage = "linear-gradient(to bottom, #005f73, #004853)";
+        banners[i].style.color = "white";
+        banners[i].style.textAlign = "center";
+        banners[i].style.padding = "8px 0";
+        banners[i].style.fontSize = "20px";
+        banners[i].style.fontWeight = "bold";
+        banners[i].style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.7)";
+    }
+
+    // Responsive font size adjustment for header on smaller screens
+    window.addEventListener('resize', function() {
+        const headerH1 = document.querySelector("header h1");
+        if(window.innerWidth <= 767 && headerH1) {
             headerH1.style.fontSize = "36px";
             headerH1.style.marginTop = "-80px";
         }
-    }
+    });
 });
