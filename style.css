@@ -293,6 +293,8 @@ footer {
 
 
 
+
+
 /* Keyframes for slide-in animations */
 @keyframes slideInFromTop {
   0% {
@@ -564,6 +566,7 @@ input[type="submit"]:hover {
   font-family: 'Roboto Slab', serif;
   font-size: 18px;
   text-transform: uppercase;
+     transition: opacity 0.5s ease, visibility 0.5s;
 }
 
 .to-top i {
@@ -777,16 +780,29 @@ button#discover-seminars:hover {
 
   .to-top:hover {
     background-color: #9a8c98;
-    color: white;
+    color: black;
   }
 
   .to-top i {
     vertical-align: middle;
   }
 
-    .to-top.white-text {
-    color: white;
-    /* Only changes the text color */
-  }
 }
+
+.to-top-large {
+    color: #c9ada7; /* Soft Pink */
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.to-top-large:hover {
+    color: #9a8c98; /* Muted Lavender */
+    text-decoration: none;
+}
+
 
