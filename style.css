@@ -1,24 +1,35 @@
 /* General Styles */
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+  /* Enables smooth scrolling for anchor links */
 }
 
 body {
-  font-family: 'Roboto Slab', serif; /* Sets the default font for the body */
-  margin: 0; /* Removes default margin */
-  padding: 0 20px; /* Adds padding to the left and right */
-  color: #000000; /* Sets default text color to black */
-  background-color: #FFFFFF; /* Sets default background color to white */
-  text-align: center; /* Centers text by default */
-  letter-spacing: 0.5px; /* Adjusts spacing between characters */
-  line-height: 1.8; /* Sets the line height for better readability */
+  font-family: 'Roboto Slab', serif;
+  /* Sets the default font for the body */
+  margin: 0;
+  /* Removes default margin */
+  padding: 0 20px;
+  /* Adds padding to the left and right */
+  color: #000000;
+  /* Sets default text color to black */
+  background-color: #FFFFFF;
+  /* Sets default background color to white */
+  text-align: center;
+  /* Centers text by default */
+  letter-spacing: 0.5px;
+  /* Adjusts spacing between characters */
+  line-height: 1.8;
+  /* Sets the line height for better readability */
 }
 
 /* Override default link styles for phone numbers */
 a[href^="tel"],
 .contact-info {
-  color: white; /* Sets the color of tel links to white */
-  text-decoration: none; /* Removes underline from links */
+  color: white;
+  /* Sets the color of tel links to white */
+  text-decoration: none;
+  /* Removes underline from links */
 }
 
 /* Ensures styles remain consistent for visited tel links */
@@ -26,225 +37,341 @@ a[href^="tel"]:visited,
 a[href^="tel"]:active,
 .contact-info:visited,
 .contact-info:active {
-  color: white; /* Keeps visited tel links white */
+  color: white;
+  /* Keeps visited tel links white */
 }
 
 /* Banner Styles */
 .banner {
-  background-image: linear-gradient(to bottom, #005f73, #004853); /* Gradient background for the banner */
-  color: white; /* White text for contrast */
-  text-align: center; /* Centers the banner text */
-  padding: 8px 0; /* Vertical padding for the banner */
-  font-size: 20px; /* Font size for banner text */
-  font-weight: bold; /* Bold font weight for emphasis */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Gradient background for the banner */
+  color: white;
+  /* White text for contrast */
+  text-align: center;
+  /* Centers the banner text */
+  padding: 8px 0;
+  /* Vertical padding for the banner */
+  font-size: 20px;
+  /* Font size for banner text */
+  font-weight: bold;
+  /* Bold font weight for emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Text shadow for better readability */
 }
 
 .contact-info {
-  display: block; /* Displays contact info as block to occupy full width */
-  color: white; /* White text for contact info */
-  text-decoration: none; /* Removes underline from contact info */
+  display: block;
+  /* Displays contact info as block to occupy full width */
+  color: white;
+  /* White text for contact info */
+  text-decoration: none;
+  /* Removes underline from contact info */
 }
 
 /* Hero Section Styles */
 header {
-  background-image: linear-gradient(to bottom, #ffdd55, #ffaa33); /* Gradient background for the header */
-  color: white; /* White text color for contrast */
-  padding: 100px 20px; /* Padding for the header */
-  position: relative; /* Relative positioning for pseudo-elements */
-  z-index: 1; /* Z-index for layering */
-  border-bottom-left-radius: 50% 20%; /* Rounded bottom left border */
-  border-bottom-right-radius: 50% 20%; /* Rounded bottom right border */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
-  animation: 1s ease-out 0s 1 slideInFromTop; /* Animation for header elements */
-  overflow: hidden; /* Hides overflowed content */
+  background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
+  /* Gradient background for the header */
+  color: white;
+  /* White text color for contrast */
+  padding: 100px 20px;
+  /* Padding for the header */
+  position: relative;
+  /* Relative positioning for pseudo-elements */
+  z-index: 1;
+  /* Z-index for layering */
+  border-bottom-left-radius: 50% 20%;
+  /* Rounded bottom left border */
+  border-bottom-right-radius: 50% 20%;
+  /* Rounded bottom right border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Box shadow for depth */
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  /* Animation for header elements */
+  overflow: hidden;
+  /* Hides overflowed content */
 }
 
 header::before {
-  content: ''; /* Necessary for pseudo-element */
-  position: absolute; /* Absolute positioning inside the header */
-  top: 0; right: 0; bottom: 0; left: 0; /* Positions the pseudo-element */
-  background: rgba(0, 0, 0, 0.04); /* Semi-transparent overlay */
-  z-index: -1; /* Places the overlay behind the text */
+  content: '';
+  /* Necessary for pseudo-element */
+  position: absolute;
+  /* Absolute positioning inside the header */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Positions the pseudo-element */
+  background: rgba(0, 0, 0, 0.04);
+  /* Semi-transparent overlay */
+  z-index: -1;
+  /* Places the overlay behind the text */
 }
 
 /* Animations for header elements */
 header h1,
 header p {
-  animation: 1s ease-out 0s 1 slideInFromTop; /* Slide-in animation */
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  /* Slide-in animation */
 }
 
 header h1 {
-  margin-bottom: 20px; /* Margin below the h1 header */
-  color: #005f73; /* Teal color for the h1 text */
-  font-size: 46px; /* Larger font size for h1 */
-  text-shadow: 1px 1px 2px #000000; /* Text shadow for h1 for readability */
-  margin-top: -20px; /* Negative top margin for positioning */
-  word-wrap: break-word; /* Allows long words to break and wrap onto the next line */
+  margin-bottom: 20px;
+  /* Margin below the h1 header */
+  color: #005f73;
+  /* Teal color for the h1 text */
+  font-size: 46px;
+  /* Larger font size for h1 */
+  text-shadow: 1px 1px 2px #000000;
+  /* Text shadow for h1 for readability */
+  margin-top: -20px;
+  /* Negative top margin for positioning */
+  word-wrap: break-word;
+  /* Allows long words to break and wrap onto the next line */
 }
 
 header p {
-  font-size: 28px; /* Font size for the paragraph */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Text shadow for paragraph */
+  font-size: 28px;
+  /* Font size for the paragraph */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  /* Text shadow for paragraph */
 }
 
 .emphasis {
-  font-weight: bold; /* Makes text bold for emphasis */
+  font-weight: bold;
+  /* Makes text bold for emphasis */
 }
 
 /* Button Styles */
 button {
-  background-color: #c9ada7; /* Background color for buttons */
-  color: #283618; /* Text color for buttons */
-  border: none; /* No border for buttons */
-  padding: 12px 25px; /* Padding for buttons */
-  cursor: pointer; /* Cursor changes to pointer on hover */
-  font-size: 18px; /* Font size for button text */
-  font-weight: bold; /* Bold font weight for button text */
-  border-radius: 5px; /* Rounded corners for buttons */
-  display: inline-block; /* Inline-block display for buttons */
-  margin: 20px 0; /* Vertical margin for buttons */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s; /* Transition effects for buttons */
-  text-transform: uppercase; /* Uppercase text for buttons */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); /* Text shadow for button text */
+  background-color: #c9ada7;
+  /* Background color for buttons */
+  color: #283618;
+  /* Text color for buttons */
+  border: none;
+  /* No border for buttons */
+  padding: 12px 25px;
+  /* Padding for buttons */
+  cursor: pointer;
+  /* Cursor changes to pointer on hover */
+  font-size: 18px;
+  /* Font size for button text */
+  font-weight: bold;
+  /* Bold font weight for button text */
+  border-radius: 5px;
+  /* Rounded corners for buttons */
+  display: inline-block;
+  /* Inline-block display for buttons */
+  margin: 20px 0;
+  /* Vertical margin for buttons */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s;
+  /* Transition effects for buttons */
+  text-transform: uppercase;
+  /* Uppercase text for buttons */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* Text shadow for button text */
 }
 
 button:hover {
-  background-color: #9a8c98; /* Background color on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Box shadow on hover */
-  color: white; /* Text color on hover */
+  background-color: #9a8c98;
+  /* Background color on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  /* Box shadow on hover */
+  color: white;
+  /* Text color on hover */
 }
 
 @keyframes fadeToWhite {
   from {
-    color: #283618; /* Starting color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Starting text shadow */
+    color: #283618;
+    /* Starting color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Starting text shadow */
   }
+
   to {
-    color: white; /* Ending color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ending text shadow */
+    color: white;
+    /* Ending color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Ending text shadow */
   }
 }
 
 .fade-to-white {
-  animation: fadeToWhite 2s forwards; /* Animation for fading to white */
+  animation: fadeToWhite 2s forwards;
+  /* Animation for fading to white */
 }
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 767px) {
   .fade-to-white {
-    animation: fadeToWhite 2s forwards 3s; /* Delayed fade-to-white animation for mobile */
+    animation: fadeToWhite 2s forwards 3s;
+    /* Delayed fade-to-white animation for mobile */
   }
 }
 
 /* About Section Styles */
 #about-us {
-  padding: 40px 20px; /* Padding for the About Us section */
-  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0); /* Background gradient */
-  position: relative; /* Relative positioning for layering */
-  z-index: 0; /* Z-index for layering */
-  border-top-left-radius: 50% 20%; /* Rounded top left border */
-  border-top-right-radius: 50% 20%; /* Rounded top right border */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
- opacity: 0; /* Initially invisible */
-  transform: translateX(-100%); /* Starts off-screen */
-  animation: slideInFromLeft 1s ease-out forwards; /* Slide-in animation with fill mode */
-  
+  padding: 40px 20px;
+  /* Padding for the About Us section */
+  background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
+  /* Background gradient */
+  position: relative;
+  /* Relative positioning for layering */
+  z-index: 0;
+  /* Z-index for layering */
+  border-top-left-radius: 50% 20%;
+  /* Rounded top left border */
+  border-top-right-radius: 50% 20%;
+  /* Rounded top right border */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Box shadow for depth */
+  opacity: 0;
+  /* Initially invisible */
+  transform: translateX(-100%);
+  /* Starts off-screen */
+  animation: slideInFromLeft 1s ease-out forwards;
+  /* Slide-in animation with fill mode */
+
 }
 
 /* Services Section Styles */
 #services {
-  padding: 40px 20px; /* Padding for the Services section */
-  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5); /* Background gradient */
-  position: relative; /* Relative positioning for layering */
-  z-index: 0; /* Z-index for layering */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  padding: 40px 20px;
+  /* Padding for the Services section */
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Background gradient */
+  position: relative;
+  /* Relative positioning for layering */
+  z-index: 0;
+  /* Z-index for layering */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Box shadow for depth */
 }
 
 .service-card {
-  background-color: white; /* Background color for service cards */
-  margin: 0 auto; /* Centered margin for service cards */
-  max-width: 300px; /* Maximum width for service cards */
-  padding: 20px; /* Padding for service cards */
-  border-radius: 10px; /* Rounded corners for service cards */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow for service cards */
-  margin-bottom: 30px; /* Bottom margin for service cards */
+  background-color: white;
+  /* Background color for service cards */
+  margin: 0 auto;
+  /* Centered margin for service cards */
+  max-width: 300px;
+  /* Maximum width for service cards */
+  padding: 20px;
+  /* Padding for service cards */
+  border-radius: 10px;
+  /* Rounded corners for service cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Box shadow for service cards */
+  margin-bottom: 30px;
+  /* Bottom margin for service cards */
 }
 
 /* Testimonials Section Styles */
 #testimonials {
-  background-image: linear-gradient(to bottom, #9a8c98, #7c737e); /* Background gradient */
-  padding: 40px 20px; /* Padding for the Testimonials section */
-  position: relative; /* Relative positioning for layering */
-  z-index: 0; /* Z-index for layering */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  background-image: linear-gradient(to bottom, #9a8c98, #7c737e);
+  /* Background gradient */
+  padding: 40px 20px;
+  /* Padding for the Testimonials section */
+  position: relative;
+  /* Relative positioning for layering */
+  z-index: 0;
+  /* Z-index for layering */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Box shadow for depth */
 }
 
 .testimonial-card {
-  background-color: white; /* Background color for testimonial cards */
-  margin: 0 auto; /* Centered margin for testimonial cards */
-  max-width: 300px; /* Maximum width for testimonial cards */
-  padding: 20px; /* Padding for testimonial cards */
-  border-radius: 10px; /* Rounded corners for testimonial cards */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow for testimonial cards */
-  margin-bottom: 30px; /* Bottom margin for testimonial cards */
+  background-color: white;
+  /* Background color for testimonial cards */
+  margin: 0 auto;
+  /* Centered margin for testimonial cards */
+  max-width: 300px;
+  /* Maximum width for testimonial cards */
+  padding: 20px;
+  /* Padding for testimonial cards */
+  border-radius: 10px;
+  /* Rounded corners for testimonial cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Box shadow for testimonial cards */
+  margin-bottom: 30px;
+  /* Bottom margin for testimonial cards */
 }
 
 /* Partnership Section Styles */
 #partnership {
-  padding: 40px 20px; /* Padding for the Partnership section */
-  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5); /* Background gradient */
-  position: relative; /* Relative positioning for layering */
-  z-index: 0; /* Z-index for layering */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  padding: 40px 20px;
+  /* Padding for the Partnership section */
+  background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
+  /* Background gradient */
+  position: relative;
+  /* Relative positioning for layering */
+  z-index: 0;
+  /* Z-index for layering */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Box shadow for depth */
 }
 
 /* Footer Styles */
 footer {
-  background-image: linear-gradient(to bottom, #005f73, #004853); /* Background gradient */
-  color: white; /* White text color for contrast */
-  padding: 40px 20px; /* Padding for the footer */
-  position: relative; /* Relative positioning for layering */
-  z-index: 0; /* Z-index for layering */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  background-image: linear-gradient(to bottom, #005f73, #004853);
+  /* Background gradient */
+  color: white;
+  /* White text color for contrast */
+  padding: 40px 20px;
+  /* Padding for the footer */
+  position: relative;
+  /* Relative positioning for layering */
+  z-index: 0;
+  /* Z-index for layering */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Box shadow for depth */
 }
 
 .footer-content {
-  max-width: 800px; /* Maximum width for footer content */
-  margin: 0 auto; /* Centered margin for footer content */
+  max-width: 800px;
+  /* Maximum width for footer content */
+  margin: 0 auto;
+  /* Centered margin for footer content */
 }
 
 /* Media Query for larger screens */
 @media screen and (min-width: 768px) {
   footer {
-    padding-top: 20px; /* Reduced top padding for larger screens */
+    padding-top: 20px;
+    /* Reduced top padding for larger screens */
   }
 
   .contact-info {
-    margin-bottom: 10px; /* Adjusted bottom margin */
+    margin-bottom: 10px;
+    /* Adjusted bottom margin */
   }
 
   #back-to-top {
-    margin-top: 0; /* Reduced top margin for the 'Back to Top' button */
+    margin-top: 0;
+    /* Reduced top margin for the 'Back to Top' button */
   }
 }
 
 
-  /* Adjust spacing for specific elements within the footer if needed */
-  .contact-info {
-    margin-bottom: 10px; /* Adjust the bottom margin of contact info */
-  }
+/* Adjust spacing for specific elements within the footer if needed */
+.contact-info {
+  margin-bottom: 10px;
+  /* Adjust the bottom margin of contact info */
+}
 
-  #back-to-top {
-    margin-top: 10px; /* Reduce the top margin of the 'Back to Top' button */
-  }
+#back-to-top {
+  margin-top: 10px;
+  /* Reduce the top margin of the 'Back to Top' button */
+}
 }
 
 /* Responsive design styles for small screens */
 @media screen and (max-width: 767px) {
+
   .service-card,
   .testimonial-card {
-    max-width: 100%; /* Full width for cards on small screens */
+    max-width: 100%;
+    /* Full width for cards on small screens */
   }
 
   #about-us,
@@ -252,55 +379,79 @@ footer {
   #testimonials,
   #partnership,
   footer {
-    border-radius: 0; /* Removes border radius on small screens */
-    top: 0; /* Adjusts top positioning on small screens */
+    border-radius: 0;
+    /* Removes border radius on small screens */
+    top: 0;
+    /* Adjusts top positioning on small screens */
   }
 }
 
 /* Keyframes for slide-in animations */
 @keyframes slideInFromTop {
   0% {
-    transform: translateY(-100%); /* Starts off-screen vertically */
-    opacity: 0; /* Starts invisible */
+    transform: translateY(-100%);
+    /* Starts off-screen vertically */
+    opacity: 0;
+    /* Starts invisible */
   }
+
   100% {
-    transform: translateY(0); /* Ends at original position */
-    opacity: 1; /* Ends fully visible */
+    transform: translateY(0);
+    /* Ends at original position */
+    opacity: 1;
+    /* Ends fully visible */
   }
 }
 
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(-100%); /* Starts off-screen horizontally */
-    opacity: 0; /* Starts invisible */
+    transform: translateX(-100%);
+    /* Starts off-screen horizontally */
+    opacity: 0;
+    /* Starts invisible */
   }
+
   100% {
-    transform: translateX(0); /* Ends at original position */
-    opacity: 1; /* Ends fully visible */
+    transform: translateX(0);
+    /* Ends at original position */
+    opacity: 1;
+    /* Ends fully visible */
   }
 }
 
 
 
 /* Initial state for sections (hidden and off-screen) */
-#about-us, #services, #testimonials, #partnership {
-    opacity: 0; /* Starts invisible */
-    transform: translateX(-100%); /* Starts off-screen */
+#about-us,
+#services,
+#testimonials,
+#partnership {
+  opacity: 0;
+  /* Starts invisible */
+  transform: translateX(-100%);
+  /* Starts off-screen */
 }
 
 /* Apply animations to section elements */
-#about-us h2, #about-us p,
-#services h2, .service p,
-#testimonials h2, .testimonial p,
-#partnership h2, #partnership p {
-    animation: 1s ease-out 0s 1 slideInFromLeft; /* Animation for slide-in from the left */
+#about-us h2,
+#about-us p,
+#services h2,
+.service p,
+#testimonials h2,
+.testimonial p,
+#partnership h2,
+#partnership p {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  /* Animation for slide-in from the left */
 }
 
 /* Media query adjustments for small screens */
 @media screen and (max-width: 767px) {
   header h1 {
-    margin-top: -80px; /* Adjusts top margin for mobile */
-    font-size: 36px; /* Smaller font size for mobile screens */
+    margin-top: -80px;
+    /* Adjusts top margin for mobile */
+    font-size: 36px;
+    /* Smaller font size for mobile screens */
   }
 }
 
@@ -311,99 +462,143 @@ footer a[href^="tel"]:visited,
 footer a[href^="tel"]:active,
 footer .contact-info:visited,
 footer .contact-info:active {
-  color: white; /* Keeps phone number links white */
-  text-decoration: none; /* Removes underline from links */
+  color: white;
+  /* Keeps phone number links white */
+  text-decoration: none;
+  /* Removes underline from links */
 }
 
 /* Styles for the 'Discover Seminars' button */
 #discover-seminars {
-  font-size: 20px; /* Font size for the button text */
-  padding: 15px 30px; /* Padding for the button */
-    color: #283618; /* Initial color - Dark Olive */
-    transition: color 2s; /* Transition for color change */
+  font-size: 20px;
+  /* Font size for the button text */
+  padding: 15px 30px;
+  /* Padding for the button */
+  color: #283618;
+  /* Initial color - Dark Olive */
+  transition: color 2s;
+  /* Transition for color change */
 }
 
 /* Mobile specific styles */
 @media screen and (max-width: 767px) {
-    /* Styles for 'Discover Seminars' button with fade effect */
-    #discover-seminars.mobile-fade {
-        animation: fadeToWhite 2s forwards; /* Fade effect */
-    }
+
+  /* Styles for 'Discover Seminars' button with fade effect */
+  #discover-seminars.mobile-fade {
+    animation: fadeToWhite 2s forwards;
+    /* Fade effect */
+  }
 }
 
 /* Keyframes for the fade effect */
 @keyframes fadeToWhite {
-    from {
-        color: #283618; /* Initial color (black) */
-    }
-    to {
-        color: white; /* Final color (white) */
-    }
+  from {
+    color: #283618;
+    /* Initial color (black) */
+  }
+
+  to {
+    color: white;
+    /* Final color (white) */
+  }
 }
 
 /* Modal styles */
 
 
 .close-button {
-  color: #aaa; /* Color for the close button */
-  float: right; /* Positions the close button to the right */
-  font-size: 28px; /* Size of the close button */
-  font-weight: bold; /* Bold font weight for the close button */
+  color: #aaa;
+  /* Color for the close button */
+  float: right;
+  /* Positions the close button to the right */
+  font-size: 28px;
+  /* Size of the close button */
+  font-weight: bold;
+  /* Bold font weight for the close button */
 }
 
 .close-button:hover,
 .close-button:focus {
-  color: black; /* Color change on hover/focus for close button */
-  text-decoration: none; /* Removes underline on hover/focus */
-  cursor: pointer; /* Changes cursor to pointer on hover/focus */
+  color: black;
+  /* Color change on hover/focus for close button */
+  text-decoration: none;
+  /* Removes underline on hover/focus */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover/focus */
 }
 
 .modal {
-  display: none; /* Keeps modal hidden by default */
-  position: fixed; /* Fixed positioning to stay in place */
-  z-index: 1; /* Ensures modal is on top */
-  left: 0; top: 0; /* Full viewport coverage */
-  width: 100%; height: 100%; /* Full width and height */
-  overflow: auto; /* Allows scrolling if content overflows */
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  display: none;
+  /* Keeps modal hidden by default */
+  position: fixed;
+  /* Fixed positioning to stay in place */
+  z-index: 1;
+  /* Ensures modal is on top */
+  left: 0;
+  top: 0;
+  /* Full viewport coverage */
+  width: 100%;
+  height: 100%;
+  /* Full width and height */
+  overflow: auto;
+  /* Allows scrolling if content overflows */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent black background */
 }
 
 .modal-content {
-  background-color: #f2e9e4; /* Light background color */
-  margin: 15% auto; /* Centered with top margin */
-  padding: 20px; /* Padding around content */
-  border: 1px solid #888; /* Border for modal content */
-  width: 80%; /* Width relative to viewport */
-  border-radius: 10px; /* Rounded corners for modal content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for modal content */
+  background-color: #f2e9e4;
+  /* Light background color */
+  margin: 15% auto;
+  /* Centered with top margin */
+  padding: 20px;
+  /* Padding around content */
+  border: 1px solid #888;
+  /* Border for modal content */
+  width: 80%;
+  /* Width relative to viewport */
+  border-radius: 10px;
+  /* Rounded corners for modal content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Box shadow for modal content */
 }
 
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
   .modal-content {
-   width: 90%; /* Slightly wider on smaller screens */
+    width: 90%;
+    /* Slightly wider on smaller screens */
   }
 }
 
 /* Close button styles */
 .close-button {
-  color: #aaa; /* Color for close button */
-  float: right; /* Positions the button to the right */
-  font-size: 28px; /* Font size for the close button */
-  font-weight: bold; /* Bold weight for the close button */
+  color: #aaa;
+  /* Color for close button */
+  float: right;
+  /* Positions the button to the right */
+  font-size: 28px;
+  /* Font size for the close button */
+  font-weight: bold;
+  /* Bold weight for the close button */
 }
 
 .close-button:hover,
 .close-button:focus {
-  color: black; /* Color change on hover/focus */
-  text-decoration: none; /* Removes underline on hover/focus */
-  cursor: pointer; /* Changes cursor to pointer on hover/focus */
+  color: black;
+  /* Color change on hover/focus */
+  text-decoration: none;
+  /* Removes underline on hover/focus */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover/focus */
 }
 
 /* Form label styles */
 label {
-  display: block; /* Makes each label occupy its own line */
-  margin-top: 10px; /* Adds top margin for spacing */
+  display: block;
+  /* Makes each label occupy its own line */
+  margin-top: 10px;
+  /* Adds top margin for spacing */
 }
 
 /* Input and textarea styles */
@@ -411,152 +606,238 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    font-size: 16px; /* Minimum font size to avoid auto-zoom on iOS */
-  width: 100%; /* Full width of the container */
-  padding: 12px 20px; /* Padding for inputs and textarea */
-  margin: 8px 0; /* Vertical margin for spacing */
-  display: inline-block; /* Inline-block display */
-  border: 1px solid #ccc; /* Border for inputs and textarea */
-  border-radius: 4px; /* Rounded corners */
-  box-sizing: border-box; /* Box-sizing to include padding and border in width/height */
+  font-size: 16px;
+  /* Minimum font size to avoid auto-zoom on iOS */
+  width: 100%;
+  /* Full width of the container */
+  padding: 12px 20px;
+  /* Padding for inputs and textarea */
+  margin: 8px 0;
+  /* Vertical margin for spacing */
+  display: inline-block;
+  /* Inline-block display */
+  border: 1px solid #ccc;
+  /* Border for inputs and textarea */
+  border-radius: 4px;
+  /* Rounded corners */
+  box-sizing: border-box;
+  /* Box-sizing to include padding and border in width/height */
 }
 
 /* Submit button styles */
 input[type="submit"] {
-  width: 100%; /* Full width of the container */
-  background-color: #005f73; /* Background color for the submit button */
-  color: white; /* White text color for contrast */
-  padding: 14px 20px; /* Padding for the submit button */
-  margin: 8px 0; /* Vertical margin for spacing */
-  border: none; /* No border for the submit button */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Changes cursor to pointer on hover */
+  width: 100%;
+  /* Full width of the container */
+  background-color: #005f73;
+  /* Background color for the submit button */
+  color: white;
+  /* White text color for contrast */
+  padding: 14px 20px;
+  /* Padding for the submit button */
+  margin: 8px 0;
+  /* Vertical margin for spacing */
+  border: none;
+  /* No border for the submit button */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
 }
 
 input[type="submit"]:hover {
-  background-color: #004853; /* Background color on hover */
+  background-color: #004853;
+  /* Background color on hover */
 }
 
 /* Styles for the submit button inside the modal */
 .modal .submit-button {
-  font-size: 20px; /* Larger font size */
-  font-weight: bold; /* Bold font weight */
-  padding: 15px 30px; /* Larger padding */
-  background-color: #c9ada7; /* Background color */
-  color: #283618; /* Text color */
-  border-radius: 5px; /* Rounded corners */
-  border: none; /* No border */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  text-transform: uppercase; /* Uppercase text */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+  font-size: 20px;
+  /* Larger font size */
+  font-weight: bold;
+  /* Bold font weight */
+  padding: 15px 30px;
+  /* Larger padding */
+  background-color: #c9ada7;
+  /* Background color */
+  color: #283618;
+  /* Text color */
+  border-radius: 5px;
+  /* Rounded corners */
+  border: none;
+  /* No border */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+  text-transform: uppercase;
+  /* Uppercase text */
+  transition: background-color 0.3s, box-shadow 0.3s;
+  /* Smooth transition effects */
 }
 
 .modal .submit-button:hover {
-  background-color: #9a8c98; /* Background color on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+  background-color: #9a8c98;
+  /* Background color on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Box shadow on hover */
 }
 
 /* Styles for labels inside the modal */
 .modal label {
-  font-size: 18px; /* Slightly smaller font size for readability */
-  font-weight: bold; /* Bold font weight for better visibility */
-  color: #283618; /* Text color */
-  margin-top: 15px; /* Top margin for spacing */
-  display: block; /* Ensures each label is on its own line */
+  font-size: 18px;
+  /* Slightly smaller font size for readability */
+  font-weight: bold;
+  /* Bold font weight for better visibility */
+  color: #283618;
+  /* Text color */
+  margin-top: 15px;
+  /* Top margin for spacing */
+  display: block;
+  /* Ensures each label is on its own line */
 }
 
 /* Styles for the 'Back to Top' link */
 .to-top {
-  color: #c9ada7; /* Text color matching button colors */
-  text-decoration: none; /* Removes underline from link */
-  display: inline-block; /* Inline-block display for positioning */
-  margin-top: 20px; /* Top margin for spacing */
-  font-family: 'Roboto Slab', serif; /* Font family matching body */
-  font-size: 18px; /* Font size for readability */
-  text-transform: uppercase; /* Uppercase text */
-  transition: opacity 0.5s ease, visibility 0.5s; /* Transition for opacity and visibility */
+  color: #c9ada7;
+  /* Text color matching button colors */
+  text-decoration: none;
+  /* Removes underline from link */
+  display: inline-block;
+  /* Inline-block display for positioning */
+  margin-top: 20px;
+  /* Top margin for spacing */
+  font-family: 'Roboto Slab', serif;
+  /* Font family matching body */
+  font-size: 18px;
+  /* Font size for readability */
+  text-transform: uppercase;
+  /* Uppercase text */
+  transition: opacity 0.5s ease, visibility 0.5s;
+  /* Transition for opacity and visibility */
 }
 
 .to-top i {
-  margin-right: 5px; /* Right margin for icon spacing */
+  margin-right: 5px;
+  /* Right margin for icon spacing */
 }
 
 .to-top:hover {
-  color: #9a8c98; /* Text color on hover */
-  text-decoration: none; /* Removes underline on hover */
+  color: #9a8c98;
+  /* Text color on hover */
+  text-decoration: none;
+  /* Removes underline on hover */
 }
 
 .to-top:active {
-  color: #283618; /* Text color when active */
-  background-color: #c9ada7; /* Background color when active */
+  color: #283618;
+  /* Text color when active */
+  background-color: #c9ada7;
+  /* Background color when active */
 }
 
 /* Marquee styles */
 .marquee {
-  width: 100%; /* Full width */
-  overflow: hidden; /* Hides overflow */
-  background: linear-gradient(to right, #fff5e5, #ffe8cc); /* Gradient background */
-  padding: 10px 0; /* Vertical padding */
-  margin-top: 20px; /* Top margin */
-  margin-bottom: 20px; /* Bottom margin */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  width: 100%;
+  /* Full width */
+  overflow: hidden;
+  /* Hides overflow */
+  background: linear-gradient(to right, #fff5e5, #ffe8cc);
+  /* Gradient background */
+  padding: 10px 0;
+  /* Vertical padding */
+  margin-top: 20px;
+  /* Top margin */
+  margin-bottom: 20px;
+  /* Bottom margin */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Box shadow for depth */
 }
 
 .marquee-content {
-  white-space: nowrap; /* Prevents wrapping */
-  min-width: 300%; /* Minimum width */
-  display: inline-block; /* Inline-block display */
-  animation: marquee 60s linear infinite; /* Continuous marquee animation */
-  -webkit-animation: marquee 60s linear infinite; /* Marquee animation for WebKit browsers */
-  -moz-animation: marquee 60s linear infinite; /* Marquee animation for Mozilla browsers */
-  -o-animation: marquee 60s linear infinite; /* Marquee animation for Opera browsers */
-  -ms-animation: marquee 60s linear infinite; /* Marquee animation for Internet Explorer browsers */
+  white-space: nowrap;
+  /* Prevents wrapping */
+  min-width: 300%;
+  /* Minimum width */
+  display: inline-block;
+  /* Inline-block display */
+  animation: marquee 60s linear infinite;
+  /* Continuous marquee animation */
+  -webkit-animation: marquee 60s linear infinite;
+  /* Marquee animation for WebKit browsers */
+  -moz-animation: marquee 60s linear infinite;
+  /* Marquee animation for Mozilla browsers */
+  -o-animation: marquee 60s linear infinite;
+  /* Marquee animation for Opera browsers */
+  -ms-animation: marquee 60s linear infinite;
+  /* Marquee animation for Internet Explorer browsers */
 }
 
 /* Adjusting FontAwesome icon alignment */
 .marquee-content i.fas.fa-circle {
-  margin: 0 5px; /* Spacing around icons */
-  font-size: 0.5em; /* Smaller icon size */
-  vertical-align: middle; /* Centers icon vertically with text */
+  margin: 0 5px;
+  /* Spacing around icons */
+  font-size: 0.5em;
+  /* Smaller icon size */
+  vertical-align: middle;
+  /* Centers icon vertically with text */
 }
 
 /* Keyframes for marquee animation */
 @keyframes marquee {
   0% {
-    transform: translateX(0%); /* Starts from the original position */
+    transform: translateX(0%);
+    /* Starts from the original position */
   }
+
   100% {
-    transform: translateX(-100%); /* Moves to the left */
+    transform: translateX(-100%);
+    /* Moves to the left */
   }
 }
 
 /* Adjustments for smaller screens */
 @media screen and (max-width: 767px) {
   .marquee-content {
-    min-width: 150%; /* Adjusted width for smaller screens */
-    animation: marquee 60s linear infinite; /* Consistent animation speed */
+    min-width: 150%;
+    /* Adjusted width for smaller screens */
+    animation: marquee 60s linear infinite;
+    /* Consistent animation speed */
   }
 }
 
 @media screen and (max-width: 767px) {
   body {
-    padding: 0 5px; /* Reduced padding for smaller screens */
+    padding: 0 5px;
+    /* Reduced padding for smaller screens */
   }
 }
 
 /* Keyframes for sliding in animations */
 @keyframes slideInFromLeftFirst {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInFromLeftSecond {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Media Query for wide screens */
 @media screen and (min-width: 1612px) {
+
   /* Animation for 'About Us' section */
   #about-us {
     animation: slideInFromLeftFirst 1s ease-out forwards;
@@ -570,109 +851,170 @@ input[type="submit"]:hover {
 
 /* Styles for 'Discover Seminars' button */
 button#discover-seminars {
-  background-color: #c9ada7; /* Soft Pink background */
-  color: #283618; /* Dark Olive text */
-  border: none; /* No border */
-  padding: 15px 30px; /* Increased padding */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 20px; /* Larger font size */
-  font-weight: bold; /* Bold font weight */
-  border-radius: 5px; /* Rounded corners */
-  display: inline-block; /* Inline-block display */
-  margin: 20px 0; /* Vertical margin */
-  text-transform: uppercase; /* Uppercase text */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); /* Text shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Box shadow */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s; /* Transition effects */
+  background-color: #c9ada7;
+  /* Soft Pink background */
+  color: #283618;
+  /* Dark Olive text */
+  border: none;
+  /* No border */
+  padding: 15px 30px;
+  /* Increased padding */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-size: 20px;
+  /* Larger font size */
+  font-weight: bold;
+  /* Bold font weight */
+  border-radius: 5px;
+  /* Rounded corners */
+  display: inline-block;
+  /* Inline-block display */
+  margin: 20px 0;
+  /* Vertical margin */
+  text-transform: uppercase;
+  /* Uppercase text */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* Text shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Box shadow */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
+  /* Transition effects */
 }
 
 button#discover-seminars:hover {
-  background-color: #9a8c98; /* Muted Lavender background on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced box shadow on hover */
-  color: white; /* White text color on hover */
-  transform: scale(1.05); /* Slight scale up on hover */
+  background-color: #9a8c98;
+  /* Muted Lavender background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  /* Enhanced box shadow on hover */
+  color: white;
+  /* White text color on hover */
+  transform: scale(1.05);
+  /* Slight scale up on hover */
 }
 
 /* Media query adjustments for larger screens */
 @media screen and (min-width: 768px) {
   button#discover-seminars {
-    font-size: 22px; /* Increased font size */
-    padding: 18px 35px; /* Increased padding */
+    font-size: 22px;
+    /* Increased font size */
+    padding: 18px 35px;
+    /* Increased padding */
   }
 }
 
 /* Adjustments for mobile devices */
 @media screen and (max-width: 767px) {
   button#discover-seminars {
-    padding: 12px 22px; /* Adjusted padding for mobile */
-    font-size: 24px; /* Adjusted font size for mobile */
+    padding: 12px 22px;
+    /* Adjusted padding for mobile */
+    font-size: 24px;
+    /* Adjusted font size for mobile */
   }
 }
 
 @media screen and (max-width: 767px) {
   body {
-    padding: 0 15px !important; /* Reduced padding for mobile */
+    padding: 0 15px !important;
+    /* Reduced padding for mobile */
   }
 }
 
 @media screen and (max-width: 767px) {
   header p {
-    padding-top: 13px; /* Increased top padding for mobile */
-    padding-bottom: 13px; /* Increased bottom padding for mobile */
+    padding-top: 13px;
+    /* Increased top padding for mobile */
+    padding-bottom: 13px;
+    /* Increased bottom padding for mobile */
   }
 }
 
 /* Adjustments for the 'Back to Top' link on mobile */
 @media screen and (max-width: 767px) {
   .to-top {
-    display: inline-block; /* Inline-block display */
-    position: fixed; /* Fixed positioning */
-    bottom: 180px; /* Bottom positioning */
-    right: 20px; /* Right positioning */
-    padding: 15px; /* Padding */
-    font-size: 24px; /* Font size */
-    background-color: #c9ada7; /* Background color */
-    color: #283618; /* Text color */
-    border-radius: 50%; /* Rounded shape */
-    text-align: center; /* Centered text */
-    width: 50px; height: 50px; /* Dimensions */
-    line-height: 20px; /* Line height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow */
-    z-index: 1000; /* Z-index */
-    padding-bottom: 5px; /* Bottom padding */
-    opacity: 0; /* Initially transparent */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.5s ease, visibility 0.5s; /* Transition effects */
+    display: inline-block;
+    /* Inline-block display */
+    position: fixed;
+    /* Fixed positioning */
+    bottom: 180px;
+    /* Bottom positioning */
+    right: 20px;
+    /* Right positioning */
+    padding: 15px;
+    /* Padding */
+    font-size: 24px;
+    /* Font size */
+    background-color: #c9ada7;
+    /* Background color */
+    color: #283618;
+    /* Text color */
+    border-radius: 50%;
+    /* Rounded shape */
+    text-align: center;
+    /* Centered text */
+    width: 50px;
+    height: 50px;
+    /* Dimensions */
+    line-height: 20px;
+    /* Line height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Box shadow */
+    z-index: 1000;
+    /* Z-index */
+    padding-bottom: 5px;
+    /* Bottom padding */
+    opacity: 0;
+    /* Initially transparent */
+    visibility: hidden;
+    /* Initially hidden */
+    transition: opacity 0.5s ease, visibility 0.5s;
+    /* Transition effects */
   }
 
   .to-top.visible {
-    opacity: 1; /* Fully visible when class 'visible' is added */
-    visibility: visible; /* Make button visible when class 'visible' is added */
+    opacity: 1;
+    /* Fully visible when class 'visible' is added */
+    visibility: visible;
+    /* Make button visible when class 'visible' is added */
   }
 
   .to-top:hover {
-    background-color: #9a8c98; /* Background color on hover */
-    color: black; /* Text color on hover */
+    background-color: #9a8c98;
+    /* Background color on hover */
+    color: black;
+    /* Text color on hover */
   }
 
   .to-top i {
-    vertical-align: middle; /* Vertical alignment for icon */
+    vertical-align: middle;
+    /* Vertical alignment for icon */
   }
 }
 
 /* Styles for larger 'Back to Top' link */
 .to-top-large {
-    color: #c9ada7; /* Text color */
-    text-decoration: none; /* Removes underline */
-    display: block; /* Block display */
-    margin-top: 20px; /* Top margin */
-    font-family: 'Roboto Slab', serif; /* Font family */
-    font-size: 18px; /* Font size */
-    text-transform: uppercase; /* Uppercase text */
-    transition: color 0.3s ease; /* Transition for color change */
+  color: #c9ada7;
+  /* Text color */
+  text-decoration: none;
+  /* Removes underline */
+  display: block;
+  /* Block display */
+  margin-top: 5px;
+  /* Top margin */
+  margin-bottom: 5px;
+  /* Adjust bottom margin */
+  font-family: 'Roboto Slab', serif;
+  /* Font family */
+  font-size: 18px;
+  /* Font size */
+  text-transform: uppercase;
+  /* Uppercase text */
+  transition: color 0.3s ease;
+  /* Transition for color change */
 }
 
 .to-top-large:hover {
-    color: #9a8c98; /* Text color on hover */
-    text-decoration: none; /* Removes underline on hover */
+  color: #9a8c98;
+  /* Text color on hover */
+  text-decoration: none;
+  /* Removes underline on hover */
 }
