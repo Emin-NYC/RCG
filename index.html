@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <!-- Meta tags for SEO and Responsive Design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,84 +12,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- Banner Section -->
     <div class="banner">
-        <a href="/RCG/" style="color: white; text-decoration: none;">Robin Consulting Group</a>
+      <a href="/RCG/" style="color: white; text-decoration: none;">Robin Consulting Group</a>
     </div>
 
     <!-- Header Section -->
     <header>
-        <h1>Digital Empowerment for Every Senior</h1>
-        <p>Discover a world of technology made accessible and enjoyable.</p>
-        <button id="discover-seminars">Explore Seminars</button>
+      <h1>Digital Empowerment for Every Senior</h1>
+      <p>Discover a world of technology made accessible and enjoyable.</p>
+      <button id="discover-seminars">Explore Seminars</button>
     </header>
 
-    <!-- About Us Section -->
-    <section id="about-us">
-        <h2>About us</h2>
-        <p>At Robin Consulting, we're dedicated to bridging the technology gap for seniors...</p>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services">
+    <main>
+      <!-- About Us Section -->
+      <section id="about-us">
+        <h2>About us</h2>
+        <p>At Robin Consulting, we empower seniors to confidently and safely navigate the digital world.</p>
+        <p> Our engaging tech education programs connect seniors with loved ones, enable access to essential services, and open up a world of digital possibilities.</p>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services">
         <h2>Our Services</h2>
         <div class="service">
-            <i class="fas fa-cogs" aria-label="Our services"></i>
-            <div class="marquee">
-                <div class="marquee-content">
-                    <i class="fas fa-circle"></i> Online Financial Literacy...
-                </div>
+          <i class="fas fa-cogs" aria-label="Our services"></i>
+          <div class="marquee">
+            <div class="marquee-content">
+              <i class="fas fa-circle"></i> Online Financial Literacy...
             </div>
-            <p>Interactive Workshops - From basics to advanced topics...</p>
+          </div>
+          <p>Interactive Workshops - From basics to advanced topics...</p>
         </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
+      <!-- Testimonials Section -->
+      <section id="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonial">
-            <p>"The seminar on online safety was an eye-opener..." - Jane D.</p>
+          <p>"The seminar on online safety was an eye-opener..." - Jane D.</p>
         </div>
-    </section>
+      </section>
 
-    <!-- Partnership Section -->
-    <section id="partnership">
+      <!-- Partnership Section -->
+      <section id="partnership">
         <h2>Partnership Opportunities</h2>
         <p>Join us in making digital literacy accessible to seniors...</p>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
-        <button id="contact-us">Get in Touch</button>
-        <p>Contact us at <span class="contact-info">info@robinconsultinggroup.com</span></p>
-        <p class="contact-info">(123) 456-7890</p>
-        <a href="#top" class="to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i> Back to Top</a>
-        <a href="#" id="back-to-top" class="to-top-large" aria-label="Back to Top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+      <button id="contact-us">Get in Touch</button>
+      <p>Contact us at <span class="contact-info">info@robinconsultinggroup.com</span></p>
+      <p class="contact-info">(123) 456-7890</p>
+      <a href="#top" class="to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+      <a href="#" id="back-to-top" class="to-top-large" aria-label="Back to Top"><i class="fas fa-arrow-up"></i> Back to Top</a>
     </footer>
 
     <!-- Contact Modal -->
     <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <!-- Contact Form Fields -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <input type="submit" class="submit-button" value="Submit">
-            </form>
-        </div>
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <!-- Contact Form Fields -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <input type="submit" class="submit-button" value="Submit">
+        </form>
+      </div>
     </div>
 
     <!-- External JavaScript File -->
     <script src="script.js"></script>
-</body>
+  </body>
+
 </html>
