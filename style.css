@@ -146,7 +146,10 @@ button:hover {
   border-top-left-radius: 50% 20%; /* Rounded top left border */
   border-top-right-radius: 50% 20%; /* Rounded top right border */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
-  animation: 1s ease-out 0s 1 slideInFromLeft; /* Slide-in animation from left */
+ opacity: 0; /* Initially invisible */
+  transform: translateX(-100%); /* Starts off-screen */
+  animation: slideInFromLeft 1s ease-out forwards; /* Slide-in animation with fill mode */
+  
 }
 
 /* Services Section Styles */
@@ -211,6 +214,23 @@ footer {
   margin: 0 auto; /* Centered margin for footer content */
 }
 
+/* Media Query for larger screens */
+@media screen and (min-width: 768px) {
+  footer {
+    padding-top: 20px; /* Reduce the top padding for larger screens */
+    padding-bottom: 20px; /* Adjust bottom padding if necessary */
+  }
+
+  /* Adjust spacing for specific elements within the footer if needed */
+  .contact-info {
+    margin-bottom: 10px; /* Adjust the bottom margin of contact info */
+  }
+
+  #back-to-top {
+    margin-top: 10px; /* Reduce the top margin of the 'Back to Top' button */
+  }
+}
+
 /* Responsive design styles for small screens */
 @media screen and (max-width: 767px) {
   .service-card,
@@ -250,6 +270,8 @@ footer {
     opacity: 1; /* Ends fully visible */
   }
 }
+
+
 
 /* Initial state for sections (hidden and off-screen) */
 #about-us, #services, #testimonials, #partnership {
