@@ -217,9 +217,18 @@ footer {
 /* Media Query for larger screens */
 @media screen and (min-width: 768px) {
   footer {
-    padding-top: 20px; /* Reduce the top padding for larger screens */
-    padding-bottom: 20px; /* Adjust bottom padding if necessary */
+    padding-top: 20px; /* Reduced top padding for larger screens */
   }
+
+  .contact-info {
+    margin-bottom: 10px; /* Adjusted bottom margin */
+  }
+
+  #back-to-top {
+    margin-top: 0; /* Reduced top margin for the 'Back to Top' button */
+  }
+}
+
 
   /* Adjust spacing for specific elements within the footer if needed */
   .contact-info {
