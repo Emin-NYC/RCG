@@ -2,100 +2,119 @@
 <html lang="en">
 
   <head>
-    <!-- Meta tags for SEO and Responsive Design -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Empowering seniors with digital literacy through tailored technology workshops and seminars.">
     <title>Robin Consulting Group - Digital Empowerment for Seniors</title>
-
-    <!-- External CSS and Font Awesome for styling -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <!-- Banner Section -->
     <div class="banner">
-      <a href="/RCG/" style="color: white; text-decoration: none;">Robin Consulting Group</a>
+      <a href="/RCG/" style="color: white; text-decoration: none;">
+        Robin Consulting Group
+      </a>
     </div>
-
-    <!-- Header Section -->
     <header>
       <h1>Digital Empowerment for Every Senior</h1>
       <p>Discover a world of technology made accessible and enjoyable.</p>
       <button id="discover-seminars">Explore Seminars</button>
     </header>
 
+    <section id="about-us">
+      <h2>About us</h2>
 
-    <main>
-      <!-- About Us Section -->
-      <section id="about-us">
-        <h2>About us</h2>
-        <p>At Robin Consulting, we empower seniors to confidently and safely navigate the digital world.</p>
-        <p> Our engaging tech education programs connect seniors with loved ones, enable access to essential services, and open up a world of digital possibilities.</p>
-      </section>
+      <p>At Robin Consulting, we're dedicated to bridging the technology gap for seniors. Our mission is to provide engaging, understandable, and practical tech education.</p>
 
-      <!-- Services Section -->
-      <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-          <i class="fas fa-cogs" aria-label="Our services"></i>
-          <div class="marquee">
-            <div class="marquee-content">
-              <i class="fas fa-circle"></i> Online Financial Literacy...
-            </div>
-          </div>
-          <p>Interactive Workshops - From basics to advanced topics...</p>
-        </div>
-      </section>
+      <p>We enable seniors to connect with loved ones, access important services, and explore the digital world confidently and safely.</p>
 
-      <!-- Testimonials Section -->
-      <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial">
-          <p>"The seminar on online safety was an eye-opener..." - Jane D.</p>
-        </div>
-      </section>
 
-      <!-- Partnership Section -->
-      <section id="partnership">
-        <h2>Partnership Opportunities</h2>
-        <p>Join us in making digital literacy accessible to seniors...</p>
-      </section>
-    </main>
+    </section>
 
-    <!-- Footer Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      
+      
+      
+      <div class="service">
+        <i class="fas fa-cogs" aria-label="Our services"></i>
+         <!-- Marquee Container -->
+  <div class="marquee">
+    <div class="marquee-content">
+<i class="fas fa-circle"></i> Online Financial Literacy 
+    <i class="fas fa-circle"></i> Identity Protection 
+    <i class="fas fa-circle"></i> How to Set and Store a Strong Password 
+    <i class="fas fa-circle"></i> Social Media and Digital News Navigation 
+    <i class="fas fa-circle"></i> Source Verification 
+    <i class="fas fa-circle"></i> And More...
+    </div>
+  </div>
+        <p>Interactive Workshops - From basics to advanced topics, learn in a supportive environment.</p>
+      </div>
+      <!-- Repeat for other services -->
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <i class="fas fa-chalkboard-teacher" aria-label="Senior attending seminar"></i> <!-- Represents teaching/learning -->
+      <div class="testimonial">
+        <p>"The seminar on online safety was an eye-opener. I now feel more confident in navigating the internet securely." - Jane D.</p>
+
+
+      </div>
+      <!-- Repeat for other testimonials -->
+    </section>
+
+    <section id="partnership">
+      <h2>Partnership Opportunities</h2>
+      <i class="fas fa-handshake" aria-label="Partnership opportunities"></i> <!-- Represents partnership or agreement -->
+
+      <p>Join us in making digital literacy accessible to seniors. Partner with us to expand the reach and impact of technology education.</p>
+      <!-- Include logos of partners -->
+    </section>
+
     <footer>
       <button id="contact-us">Get in Touch</button>
       <p>Contact us at <span class="contact-info">info@robinconsultinggroup.com</span></p>
-      <p class="contact-info">(123) 456-7890</p>
-      <a href="#top" class="to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i> Back to Top</a>
-      <a href="#" id="back-to-top" class="to-top-large" aria-label="Back to Top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+      <p class="contact-info"> (123) 456-7890</p>
+
+      <!-- Add social media icons -->
+
+      <a href="#top" class="to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i> Back to Top
+      </a>
+
     </footer>
 
-    <!-- Contact Modal -->
+
+
     <div id="contactModal" class="modal">
       <div class="modal-content">
         <span class="close-button">&times;</span>
         <h2>Contact Us</h2>
         <form id="contactForm">
-          <!-- Contact Form Fields -->
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required><br><br>
+
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" required><br><br>
+
           <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone">
+          <input type="tel" id="phone" name="phone"><br><br>
+
           <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea id="message" name="message" rows="4" required></textarea><br><br>
           <input type="submit" class="submit-button" value="Submit">
+
         </form>
       </div>
     </div>
-
-    <!-- External JavaScript File -->
     <script src="script.js"></script>
+
   </body>
 
 </html>
