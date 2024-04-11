@@ -1,377 +1,284 @@
 /* General Styles */
 html {
   scroll-behavior: smooth;
-  /* Enables smooth scrolling for anchor links */
 }
+
 
 body {
   font-family: 'Roboto Slab', serif;
-  /* Sets the default font for the body */
   margin: 0;
-  /* Removes default margin */
-  padding: 0 20px;
-  /* Adds padding to the left and right */
+  padding: 0, 20px;
   color: #000000;
-  /* Sets default text color to black */
+  /* Black text */
   background-color: #FFFFFF;
-  /* Sets default background color to white */
+  /* White background */
   text-align: center;
-  /* Centers text by default */
+  /* Ensures text is centered */
   letter-spacing: 0.5px;
-  /* Adjusts spacing between characters */
   line-height: 1.8;
-  /* Sets the line height for better readability */
 }
+
+
 
 /* Override default link styles for phone numbers */
 a[href^="tel"],
 .contact-info {
   color: white;
-  /* Sets the color of tel links to white */
+  /* Set the color to white */
   text-decoration: none;
-  /* Removes underline from links */
+  /* Remove underline */
 }
 
-/* Ensures styles remain consistent for visited tel links */
+/* Ensuring the styles apply even when the link is visited or active */
 a[href^="tel"]:visited,
 a[href^="tel"]:active,
 .contact-info:visited,
 .contact-info:active {
   color: white;
-  /* Keeps visited tel links white */
 }
+
 
 /* Banner Styles */
 .banner {
   background-image: linear-gradient(to bottom, #005f73, #004853);
-  /* Gradient background for the banner */
+  /* Gradient as before */
   color: white;
-  /* White text for contrast */
+  /* Text color */
   text-align: center;
-  /* Centers the banner text */
+  /* Center the text */
   padding: 8px 0;
-  /* Vertical padding for the banner */
+  /* Reduced padding for a smaller banner */
   font-size: 20px;
-  /* Font size for banner text */
+  /* Adjust font size if needed */
   font-weight: bold;
-  /* Bold font weight for emphasis */
+  /* Bold text */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  /* Text shadow for better readability */
+  /* Text shadow for legibility */
 }
 
 .contact-info {
   display: block;
-  /* Displays contact info as block to occupy full width */
+  /* This makes each span take a full line */
   color: white;
-  /* White text for contact info */
+  /* Keeps the text color white */
   text-decoration: none;
-  /* Removes underline from contact info */
+  /* Removes any underline */
 }
 
-/* Hero Section Styles */
+
+/* Hero Section */
 header {
   background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
-  /* Gradient background for the header */
   color: white;
-  /* White text color for contrast */
   padding: 100px 20px;
-  /* Padding for the header */
   position: relative;
-  /* Relative positioning for pseudo-elements */
   z-index: 1;
-  /* Z-index for layering */
   border-bottom-left-radius: 50% 20%;
-  /* Rounded bottom left border */
   border-bottom-right-radius: 50% 20%;
-  /* Rounded bottom right border */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  /* Box shadow for depth */
   animation: 1s ease-out 0s 1 slideInFromTop;
-  /* Animation for header elements */
-  overflow: hidden;
-  /* Hides overflowed content */
+  overflow: hidden; /* Make sure the pseudo-element is contained within the header */
 }
 
+/* Pseudo-element for shading */
 header::before {
   content: '';
-  /* Necessary for pseudo-element */
   position: absolute;
-  /* Absolute positioning inside the header */
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  /* Positions the pseudo-element */
-  background: rgba(0, 0, 0, 0.04);
-  /* Semi-transparent overlay */
-  z-index: -1;
-  /* Places the overlay behind the text */
+  background: rgba(0, 0, 0, 0.04); /* Semi-transparent black background */
+  z-index: -1; /* Ensure it sits behind the text */
 }
 
-/* Animations for header elements */
+
+
+
+
+
+/* Apply the animation to header elements */
 header h1,
 header p {
   animation: 1s ease-out 0s 1 slideInFromTop;
-  /* Slide-in animation */
 }
 
 header h1 {
   margin-bottom: 20px;
-  /* Margin below the h1 header */
   color: #005f73;
-  /* Teal color for the h1 text */
+  /* Teal */
   font-size: 46px;
-  /* Larger font size for h1 */
+  /* Increase font size */
   text-shadow: 1px 1px 2px #000000;
-  /* Text shadow for h1 for readability */
+  /* Black shadow */
   margin-top: -20px;
-  /* Negative top margin for positioning */
   word-wrap: break-word;
-  /* Allows long words to break and wrap onto the next line */
+
 }
 
 header p {
-  font-size: 28px;
-  /* Font size for the paragraph */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-  /* Text shadow for paragraph */
+  font-size: 28px; /* Keep the current font size */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Sharp and distinct black shadow */
 }
+
 
 .emphasis {
   font-weight: bold;
-  /* Makes text bold for emphasis */
 }
 
-/* Button Styles */
+/* Buttons */
 button {
   background-color: #c9ada7;
-  /* Background color for buttons */
+  /* Soft Pink */
   color: #283618;
-  /* Text color for buttons */
+  /* Dark Olive - Adjust if needed for better contrast */
   border: none;
-  /* No border for buttons */
   padding: 12px 25px;
-  /* Padding for buttons */
   cursor: pointer;
-  /* Cursor changes to pointer on hover */
   font-size: 18px;
-  /* Font size for button text */
+  /* Slightly larger font size */
   font-weight: bold;
-  /* Bold font weight for button text */
+  /* Make text bold */
   border-radius: 5px;
-  /* Rounded corners for buttons */
   display: inline-block;
-  /* Inline-block display for buttons */
+  /* Center align button */
   margin: 20px 0;
-  /* Vertical margin for buttons */
+  /* Spacing around buttons */
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s;
-  /* Transition effects for buttons */
+  /* Smooth transition for hover effects */
   text-transform: uppercase;
-  /* Uppercase text for buttons */
+  /* Uppercase text */
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  /* Text shadow for button text */
+  /* Adjusted for lighter shadow */
 }
 
 button:hover {
-  background-color: #9a8c98;
-  /* Background color on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-  /* Box shadow on hover */
-  color: white;
-  /* Text color on hover */
+  background-color: #9a8c98; /* Muted Lavender */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for better depth */
+  color: white; /* High contrast text color */
 }
+
+
 
 @keyframes fadeToWhite {
   from {
-    color: #283618;
-    /* Starting color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    /* Starting text shadow */
+    color: #283618; /* Original color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sharper shadow for clarity */
   }
-
   to {
     color: white;
-    /* Ending color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    /* Ending text shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Maintain sharpness */
   }
 }
 
 .fade-to-white {
-  animation: fadeToWhite 2s forwards;
-  /* Animation for fading to white */
+  animation: fadeToWhite 2s forwards; /* Shorter duration */
 }
 
-/* Media queries for responsiveness */
+/* Starting animation 1 second after page load for quick visibility */
 @media screen and (max-width: 767px) {
   .fade-to-white {
-    animation: fadeToWhite 2s forwards 3s;
-    /* Delayed fade-to-white animation for mobile */
+    animation: fadeToWhite 2s forwards 3s; /* Starts after 1 second */
   }
 }
 
-/* About Section Styles */
+
+
+
+
+/* About Section */
 #about-us {
   padding: 40px 20px;
-  /* Padding for the About Us section */
   background-image: linear-gradient(to bottom right, #f9f7f5, #e0e0e0);
-  /* Background gradient */
+  /* Subtle off-white gradient */
   position: relative;
-  /* Relative positioning for layering */
   z-index: 0;
-  /* Z-index for layering */
   border-top-left-radius: 50% 20%;
-  /* Rounded top left border */
   border-top-right-radius: 50% 20%;
-  /* Rounded top right border */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Box shadow for depth */
-  opacity: 0;
-  /* Initially invisible */
-  transform: translateX(-100%);
-  /* Starts off-screen */
-  animation: slideInFromLeft 1s ease-out forwards;
-  /* Slide-in animation with fill mode */
-
+  /* Add subtle shadow */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-/* Services Section Styles */
+/* Services Section */
 #services {
   padding: 40px 20px;
-  /* Padding for the Services section */
   background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
-  /* Background gradient */
+  /* Subtle off-white gradient */
   position: relative;
-  /* Relative positioning for layering */
   z-index: 0;
-  /* Z-index for layering */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Box shadow for depth */
+  /* Add subtle shadow */
 }
 
 .service-card {
   background-color: white;
-  /* Background color for service cards */
   margin: 0 auto;
-  /* Centered margin for service cards */
+  /* Center align card */
   max-width: 300px;
-  /* Maximum width for service cards */
   padding: 20px;
-  /* Padding for service cards */
   border-radius: 10px;
-  /* Rounded corners for service cards */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Box shadow for service cards */
   margin-bottom: 30px;
-  /* Bottom margin for service cards */
 }
 
-/* Testimonials Section Styles */
+/* Testimonials Section */
 #testimonials {
   background-image: linear-gradient(to bottom, #9a8c98, #7c737e);
-  /* Background gradient */
+  /* Subtle lavender gradient */
   padding: 40px 20px;
-  /* Padding for the Testimonials section */
   position: relative;
-  /* Relative positioning for layering */
   z-index: 0;
-  /* Z-index for layering */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Box shadow for depth */
+  /* Add subtle shadow */
 }
 
 .testimonial-card {
   background-color: white;
-  /* Background color for testimonial cards */
   margin: 0 auto;
-  /* Centered margin for testimonial cards */
+  /* Center align card */
   max-width: 300px;
-  /* Maximum width for testimonial cards */
   padding: 20px;
-  /* Padding for testimonial cards */
   border-radius: 10px;
-  /* Rounded corners for testimonial cards */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Box shadow for testimonial cards */
   margin-bottom: 30px;
-  /* Bottom margin for testimonial cards */
 }
 
-/* Partnership Section Styles */
+/* Partnership Section */
 #partnership {
   padding: 40px 20px;
-  /* Padding for the Partnership section */
   background-image: linear-gradient(to bottom, #f2e9e4, #d6cec5);
-  /* Background gradient */
+  /* Subtle off-white gradient */
   position: relative;
-  /* Relative positioning for layering */
   z-index: 0;
-  /* Z-index for layering */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Box shadow for depth */
+  /* Add subtle shadow */
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
   background-image: linear-gradient(to bottom, #005f73, #004853);
-  /* Background gradient */
+  /* Subtle teal gradient */
   color: white;
-  /* White text color for contrast */
   padding: 40px 20px;
-  /* Padding for the footer */
   position: relative;
-  /* Relative positioning for layering */
   z-index: 0;
-  /* Z-index for layering */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* Box shadow for depth */
+  /* Add subtle shadow */
 }
 
 .footer-content {
   max-width: 800px;
-  /* Maximum width for footer content */
   margin: 0 auto;
-  /* Centered margin for footer content */
+  /* Center align footer content */
 }
 
-/* Media Query for larger screens */
-@media screen and (min-width: 768px) {
-  footer {
-    padding-top: 20px;
-    /* Reduced top padding for larger screens */
-  }
-
-  .contact-info {
-    margin-bottom: 10px;
-    /* Adjusted bottom margin */
-  }
-
-  #back-to-top {
-    margin-top: 0;
-    /* Reduced top margin for the 'Back to Top' button */
-  }
-}
-
-
-/* Adjust spacing for specific elements within the footer if needed */
-.contact-info {
-  margin-bottom: 10px;
-  /* Adjust the bottom margin of contact info */
-}
-
-#back-to-top {
-  margin-top: 10px;
-  /* Reduce the top margin of the 'Back to Top' button */
-}
-}
-
-/* Responsive design styles for small screens */
+/* Responsive Design */
 @media screen and (max-width: 767px) {
 
   .service-card,
   .testimonial-card {
     max-width: 100%;
-    /* Full width for cards on small screens */
   }
 
   #about-us,
@@ -380,82 +287,74 @@ footer {
   #partnership,
   footer {
     border-radius: 0;
-    /* Removes border radius on small screens */
     top: 0;
-    /* Adjusts top positioning on small screens */
   }
 }
+
+
 
 /* Keyframes for slide-in animations */
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
-    /* Starts off-screen vertically */
     opacity: 0;
-    /* Starts invisible */
   }
 
   100% {
     transform: translateY(0);
-    /* Ends at original position */
     opacity: 1;
-    /* Ends fully visible */
   }
 }
 
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
-    /* Starts off-screen horizontally */
     opacity: 0;
-    /* Starts invisible */
   }
 
   100% {
     transform: translateX(0);
-    /* Ends at original position */
     opacity: 1;
-    /* Ends fully visible */
   }
 }
 
 
-
-/* Initial state for sections (hidden and off-screen) */
-#about-us,
-#services,
-#testimonials,
-#partnership {
-  opacity: 0;
-  /* Starts invisible */
-  transform: translateX(-100%);
-  /* Starts off-screen */
-}
-
-/* Apply animations to section elements */
-#about-us h2,
-#about-us p,
+/* Apply the animation to each section's heading and paragraph */
 #services h2,
 .service p,
 #testimonials h2,
 .testimonial p,
 #partnership h2,
 #partnership p {
+  /* Animation is set but not activated yet */
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  /* Animation for slide-in from the left */
 }
 
-/* Media query adjustments for small screens */
+
+/* Initial state for section elements (hidden and positioned to the left) */
+#services,
+#testimonials,
+#partnership {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Media query for mobile devices */
 @media screen and (max-width: 767px) {
   header h1 {
     margin-top: -80px;
-    /* Adjusts top margin for mobile */
-    font-size: 36px;
-    /* Smaller font size for mobile screens */
+    /* Reduced top margin for mobile */
+    /* Adjust the margin value as needed to bring the text closer to the banner */
   }
 }
 
-/* Phone number link styles for the footer */
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 36px;
+    /* Smaller font size for smaller screens */
+  }
+}
+
 footer a[href^="tel"],
 footer .contact-info,
 footer a[href^="tel"]:visited,
@@ -463,210 +362,173 @@ footer a[href^="tel"]:active,
 footer .contact-info:visited,
 footer .contact-info:active {
   color: white;
-  /* Keeps phone number links white */
+  /* Set the color to white */
   text-decoration: none;
-  /* Removes underline from links */
+  /* Remove underline */
 }
 
-/* Styles for the 'Discover Seminars' button */
 #discover-seminars {
   font-size: 20px;
-  /* Font size for the button text */
+  /* Increased font size for the text */
   padding: 15px 30px;
-  /* Padding for the button */
-  color: #283618;
-  /* Initial color - Dark Olive */
-  transition: color 2s;
-  /* Transition for color change */
+  /* Increased padding for a larger button */
 }
 
-/* Mobile specific styles */
-@media screen and (max-width: 767px) {
-
-  /* Styles for 'Discover Seminars' button with fade effect */
-  #discover-seminars.mobile-fade {
-    animation: fadeToWhite 2s forwards;
-    /* Fade effect */
-  }
+/* Modal Styles */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
-/* Keyframes for the fade effect */
-@keyframes fadeToWhite {
-  from {
-    color: #283618;
-    /* Initial color (black) */
-  }
-
-  to {
-    color: white;
-    /* Final color (white) */
-  }
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
 }
 
-/* Modal styles */
-
-
+/* Close Button */
 .close-button {
   color: #aaa;
-  /* Color for the close button */
   float: right;
-  /* Positions the close button to the right */
   font-size: 28px;
-  /* Size of the close button */
   font-weight: bold;
-  /* Bold font weight for the close button */
 }
 
 .close-button:hover,
 .close-button:focus {
   color: black;
-  /* Color change on hover/focus for close button */
   text-decoration: none;
-  /* Removes underline on hover/focus */
   cursor: pointer;
-  /* Changes cursor to pointer on hover/focus */
 }
 
 .modal {
   display: none;
-  /* Keeps modal hidden by default */
+  /* Hidden by default */
   position: fixed;
-  /* Fixed positioning to stay in place */
+  /* Stay in place */
   z-index: 1;
-  /* Ensures modal is on top */
+  /* Sit on top */
   left: 0;
   top: 0;
-  /* Full viewport coverage */
   width: 100%;
+  /* Full width */
   height: 100%;
-  /* Full width and height */
+  /* Full height */
   overflow: auto;
-  /* Allows scrolling if content overflows */
+  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Semi-transparent black background */
+  /* Black with opacity */
 }
 
 .modal-content {
   background-color: #f2e9e4;
-  /* Light background color */
+  /* Subtle off-white gradient */
   margin: 15% auto;
-  /* Centered with top margin */
+  /* 15% from the top and centered */
   padding: 20px;
-  /* Padding around content */
   border: 1px solid #888;
-  /* Border for modal content */
   width: 80%;
-  /* Width relative to viewport */
+  /* Could be more or less, depending on screen size */
   border-radius: 10px;
-  /* Rounded corners for modal content */
+  /* Soften the edges */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Box shadow for modal content */
+  /* Add a box shadow */
 }
 
-/* Media query for larger screens */
+/* New Media Query for Desktop Screens */
 @media screen and (min-width: 768px) {
   .modal-content {
-    width: 90%;
-    /* Slightly wider on smaller screens */
+    max-width: 600px;
+    /* Set a maximum width for larger screens */
   }
 }
 
-/* Close button styles */
+
 .close-button {
   color: #aaa;
-  /* Color for close button */
   float: right;
-  /* Positions the button to the right */
   font-size: 28px;
-  /* Font size for the close button */
   font-weight: bold;
-  /* Bold weight for the close button */
 }
 
 .close-button:hover,
 .close-button:focus {
   color: black;
-  /* Color change on hover/focus */
   text-decoration: none;
-  /* Removes underline on hover/focus */
   cursor: pointer;
-  /* Changes cursor to pointer on hover/focus */
 }
 
-/* Form label styles */
 label {
   display: block;
-  /* Makes each label occupy its own line */
   margin-top: 10px;
-  /* Adds top margin for spacing */
 }
 
-/* Input and textarea styles */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  font-size: 16px;
-  /* Minimum font size to avoid auto-zoom on iOS */
   width: 100%;
-  /* Full width of the container */
   padding: 12px 20px;
-  /* Padding for inputs and textarea */
   margin: 8px 0;
-  /* Vertical margin for spacing */
   display: inline-block;
-  /* Inline-block display */
   border: 1px solid #ccc;
-  /* Border for inputs and textarea */
   border-radius: 4px;
-  /* Rounded corners */
   box-sizing: border-box;
-  /* Box-sizing to include padding and border in width/height */
 }
 
-/* Submit button styles */
 input[type="submit"] {
   width: 100%;
-  /* Full width of the container */
   background-color: #005f73;
-  /* Background color for the submit button */
   color: white;
-  /* White text color for contrast */
   padding: 14px 20px;
-  /* Padding for the submit button */
   margin: 8px 0;
-  /* Vertical margin for spacing */
   border: none;
-  /* No border for the submit button */
   border-radius: 4px;
-  /* Rounded corners */
   cursor: pointer;
-  /* Changes cursor to pointer on hover */
 }
 
 input[type="submit"]:hover {
   background-color: #004853;
-  /* Background color on hover */
 }
 
-/* Styles for the submit button inside the modal */
 .modal .submit-button {
   font-size: 20px;
-  /* Larger font size */
+  /* Increase font size */
   font-weight: bold;
-  /* Bold font weight */
+  /* Make text bold */
   padding: 15px 30px;
-  /* Larger padding */
+  /* Increase padding for a larger button */
   background-color: #c9ada7;
-  /* Background color */
+  /* Soft Pink for background */
   color: #283618;
-  /* Text color */
+  /* Dark Olive color for text */
   border-radius: 5px;
   /* Rounded corners */
   border: none;
   /* No border */
   cursor: pointer;
-  /* Changes cursor to pointer on hover */
+  /* Cursor changes to pointer on hover */
   text-transform: uppercase;
   /* Uppercase text */
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -675,346 +537,255 @@ input[type="submit"]:hover {
 
 .modal .submit-button:hover {
   background-color: #9a8c98;
-  /* Background color on hover */
+  /* Darker shade for hover */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* Box shadow on hover */
+  /* Shadow effect for depth on hover */
 }
 
-/* Styles for labels inside the modal */
 .modal label {
   font-size: 18px;
-  /* Slightly smaller font size for readability */
+  /* Slightly smaller than the button text, but larger for visibility */
   font-weight: bold;
-  /* Bold font weight for better visibility */
+  /* Bold for better legibility */
   color: #283618;
-  /* Text color */
+  /* Dark Olive color for contrast */
   margin-top: 15px;
-  /* Top margin for spacing */
+  /* Space above each label */
   display: block;
-  /* Ensures each label is on its own line */
+  /* Ensures the label takes its own line */
 }
 
-/* Styles for the 'Back to Top' link */
 .to-top {
   color: #c9ada7;
-  /* Text color matching button colors */
+  /* Soft Pink to match button colors */
   text-decoration: none;
-  /* Removes underline from link */
   display: inline-block;
-  /* Inline-block display for positioning */
   margin-top: 20px;
-  /* Top margin for spacing */
   font-family: 'Roboto Slab', serif;
-  /* Font family matching body */
   font-size: 18px;
-  /* Font size for readability */
   text-transform: uppercase;
-  /* Uppercase text */
-  transition: opacity 0.5s ease, visibility 0.5s;
-  /* Transition for opacity and visibility */
 }
 
 .to-top i {
   margin-right: 5px;
-  /* Right margin for icon spacing */
 }
 
 .to-top:hover {
   color: #9a8c98;
-  /* Text color on hover */
+  /* Muted Lavender for hover */
   text-decoration: none;
-  /* Removes underline on hover */
 }
 
 .to-top:active {
-  color: #283618;
-  /* Text color when active */
-  background-color: #c9ada7;
-  /* Background color when active */
+    color: #283618; /* This should be the original text color of the button */
+    background-color: #c9ada7; /* This should be the original background color of the button */
 }
 
-/* Marquee styles */
+
 .marquee {
   width: 100%;
-  /* Full width */
   overflow: hidden;
-  /* Hides overflow */
   background: linear-gradient(to right, #fff5e5, #ffe8cc);
-  /* Gradient background */
+  /* Soft, warm gradient */
   padding: 10px 0;
-  /* Vertical padding */
+  /* Padding for the marquee */
   margin-top: 20px;
-  /* Top margin */
   margin-bottom: 20px;
-  /* Bottom margin */
+  /* Increased bottom margin */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Box shadow for depth */
+  /* Optional: Adds a subtle shadow */
 }
+
 
 .marquee-content {
   white-space: nowrap;
-  /* Prevents wrapping */
   min-width: 300%;
-  /* Minimum width */
+  /* Reduced width */
   display: inline-block;
-  /* Inline-block display */
   animation: marquee 60s linear infinite;
-  /* Continuous marquee animation */
+  /* Slower animation */
   -webkit-animation: marquee 60s linear infinite;
-  /* Marquee animation for WebKit browsers */
+  /* for Safari and Chrome */
   -moz-animation: marquee 60s linear infinite;
-  /* Marquee animation for Mozilla browsers */
+  /* for Firefox */
   -o-animation: marquee 60s linear infinite;
-  /* Marquee animation for Opera browsers */
+  /* for Opera */
   -ms-animation: marquee 60s linear infinite;
-  /* Marquee animation for Internet Explorer browsers */
+  /* for Internet Explorer */
 }
 
 /* Adjusting FontAwesome icon alignment */
 .marquee-content i.fas.fa-circle {
   margin: 0 5px;
-  /* Spacing around icons */
+  /* Add some spacing around icons */
   font-size: 0.5em;
-  /* Smaller icon size */
+  /* Adjust icon size as needed */
   vertical-align: middle;
-  /* Centers icon vertically with text */
+  /* Center icon vertically with text */
 }
 
-/* Keyframes for marquee animation */
+
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);
-    /* Starts from the original position */
   }
 
   100% {
     transform: translateX(-100%);
-    /* Moves to the left */
   }
 }
 
-/* Adjustments for smaller screens */
 @media screen and (max-width: 767px) {
   .marquee-content {
     min-width: 150%;
-    /* Adjusted width for smaller screens */
+    /* Adjust for smaller screens */
     animation: marquee 60s linear infinite;
-    /* Consistent animation speed */
+    /* Consistent slower animation for readability */
   }
 }
 
 @media screen and (max-width: 767px) {
   body {
     padding: 0 5px;
-    /* Reduced padding for smaller screens */
+    /* Less padding for smaller screens */
   }
 }
 
-/* Keyframes for sliding in animations */
-@keyframes slideInFromLeftFirst {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
 
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+
+
+
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeftFirst {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInFromLeftSecond {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
+
+
+/* Existing CSS... */
 
 /* Media Query for wide screens */
 @media screen and (min-width: 1612px) {
-
-  /* Animation for 'About Us' section */
+  /* Apply animation to the 'About Us' section */
   #about-us {
     animation: slideInFromLeftFirst 1s ease-out forwards;
   }
 
-  /* Animation for 'Our Services' section with delay */
+  /* Apply animation to the 'Our Services' section with a delay */
   #services {
     animation: slideInFromLeftSecond 1s ease-out 0.5s forwards;
   }
 }
 
-/* Styles for 'Discover Seminars' button */
+
+
+
+
 button#discover-seminars {
-  background-color: #c9ada7;
-  /* Soft Pink background */
-  color: #283618;
-  /* Dark Olive text */
+  background-color: #c9ada7; /* Soft Pink */
+  color: #283618; /* Dark Olive */
   border: none;
-  /* No border */
-  padding: 15px 30px;
-  /* Increased padding */
+  padding: 15px 30px; /* Increased padding */
   cursor: pointer;
-  /* Pointer cursor on hover */
-  font-size: 20px;
-  /* Larger font size */
+  font-size: 20px; /* Increased font size */
   font-weight: bold;
-  /* Bold font weight */
   border-radius: 5px;
-  /* Rounded corners */
   display: inline-block;
-  /* Inline-block display */
   margin: 20px 0;
-  /* Vertical margin */
   text-transform: uppercase;
-  /* Uppercase text */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  /* Text shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  /* Box shadow */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); /* Slight shadow for text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for button */
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
-  /* Transition effects */
 }
 
 button#discover-seminars:hover {
-  background-color: #9a8c98;
-  /* Muted Lavender background on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  /* Enhanced box shadow on hover */
+  background-color: #9a8c98; /* Muted Lavender */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* More prominent shadow on hover */
   color: white;
-  /* White text color on hover */
-  transform: scale(1.05);
-  /* Slight scale up on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Media query adjustments for larger screens */
+/* Media query for larger screens */
 @media screen and (min-width: 768px) {
   button#discover-seminars {
-    font-size: 22px;
-    /* Increased font size */
-    padding: 18px 35px;
-    /* Increased padding */
+    font-size: 22px; /* Even larger font size */
+    padding: 18px 35px; /* Even more padding */
   }
 }
 
-/* Adjustments for mobile devices */
+/* Slightly larger button size for mobile devices */
 @media screen and (max-width: 767px) {
   button#discover-seminars {
     padding: 12px 22px;
-    /* Adjusted padding for mobile */
+    /* Slightly larger padding for mobile */
     font-size: 24px;
-    /* Adjusted font size for mobile */
+    /* Slightly larger font size for mobile */
   }
 }
 
 @media screen and (max-width: 767px) {
   body {
-    padding: 0 15px !important;
-    /* Reduced padding for mobile */
+    padding: 0 15px !important; /* Reduced padding on both sides */
   }
 }
+
 
 @media screen and (max-width: 767px) {
   header p {
-    padding-top: 13px;
-    /* Increased top padding for mobile */
-    padding-bottom: 13px;
-    /* Increased bottom padding for mobile */
+    padding-top: 13px; /* Increase top padding */
+    padding-bottom: 13px; /* Increase bottom padding */
   }
 }
 
-/* Adjustments for the 'Back to Top' link on mobile */
+
+/* Original .to-top styles here... */
+
 @media screen and (max-width: 767px) {
   .to-top {
-    display: inline-block;
-    /* Inline-block display */
+    display: inline-block; /* Ensure the element is displayable */
     position: fixed;
-    /* Fixed positioning */
     bottom: 180px;
-    /* Bottom positioning */
     right: 20px;
-    /* Right positioning */
     padding: 15px;
-    /* Padding */
     font-size: 24px;
-    /* Font size */
     background-color: #c9ada7;
-    /* Background color */
     color: #283618;
-    /* Text color */
     border-radius: 50%;
-    /* Rounded shape */
     text-align: center;
-    /* Centered text */
     width: 50px;
     height: 50px;
-    /* Dimensions */
     line-height: 20px;
-    /* Line height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Box shadow */
     z-index: 1000;
-    /* Z-index */
     padding-bottom: 5px;
-    /* Bottom padding */
-    opacity: 0;
-    /* Initially transparent */
-    visibility: hidden;
-    /* Initially hidden */
-    transition: opacity 0.5s ease, visibility 0.5s;
-    /* Transition effects */
+    opacity: 0; /* Initially transparent */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.5s ease, visibility 0.5s; /* Transition for opacity and visibility */
   }
 
   .to-top.visible {
-    opacity: 1;
-    /* Fully visible when class 'visible' is added */
-    visibility: visible;
-    /* Make button visible when class 'visible' is added */
+    opacity: 1; /* Fully visible when class 'visible' is added */
+    visibility: visible; /* Make button visible when class 'visible' is added */
   }
 
   .to-top:hover {
     background-color: #9a8c98;
-    /* Background color on hover */
-    color: black;
-    /* Text color on hover */
+    color: white;
   }
 
   .to-top i {
     vertical-align: middle;
-    /* Vertical alignment for icon */
   }
-}
 
-/* Styles for larger 'Back to Top' link */
-.to-top-large {
-  color: #c9ada7;
-  /* Text color */
-  text-decoration: none;
-  /* Removes underline */
-  display: block;
-  /* Block display */
-  margin-top: 5px;
-  /* Top margin */
-  margin-bottom: 5px;
-  /* Adjust bottom margin */
-  font-family: 'Roboto Slab', serif;
-  /* Font family */
-  font-size: 18px;
-  /* Font size */
-  text-transform: uppercase;
-  /* Uppercase text */
-  transition: color 0.3s ease;
-  /* Transition for color change */
-}
-
-.to-top-large:hover {
-  color: #9a8c98;
-  /* Text color on hover */
-  text-decoration: none;
-  /* Removes underline on hover */
+    .to-top.white-text {
+    color: white;
+    /* Only changes the text color */
+  }
 }
