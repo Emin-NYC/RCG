@@ -1,9 +1,4 @@
 /* General Styles */
-html {
-  scroll-behavior: smooth;
-}
-
-
 body {
   font-family: 'Roboto Slab', serif;
   margin: 0;
@@ -16,9 +11,8 @@ body {
   /* Ensures text is centered */
   letter-spacing: 0.5px;
   line-height: 1.8;
+
 }
-
-
 
 /* Override default link styles for phone numbers */
 a[href^="tel"],
@@ -68,7 +62,9 @@ a[href^="tel"]:active,
 
 /* Hero Section */
 header {
-  background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
+background-image: linear-gradient(to bottom, #ffdd55, #ffaa33);
+
+  /* Metallic gold gradient */
   color: white;
   padding: 100px 20px;
   position: relative;
@@ -76,26 +72,10 @@ header {
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Increased shadow intensity */
   animation: 1s ease-out 0s 1 slideInFromTop;
-  overflow: hidden; /* Make sure the pseudo-element is contained within the header */
+  /* Slide in from top */
 }
-
-/* Pseudo-element for shading */
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.04); /* Semi-transparent black background */
-  z-index: -1; /* Ensure it sits behind the text */
-}
-
-
-
-
-
 
 /* Apply the animation to header elements */
 header h1,
@@ -117,10 +97,11 @@ header h1 {
 }
 
 header p {
-  font-size: 28px; /* Keep the current font size */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Sharp and distinct black shadow */
+  font-size: 28px;
+  /* Increase font size */
+  text-shadow: 2px 2px 4px #000000;
+  /* Black shadow for contrast */
 }
-
 
 .emphasis {
   font-weight: bold;
@@ -144,7 +125,7 @@ button {
   /* Center align button */
   margin: 20px 0;
   /* Spacing around buttons */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s, font-size 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   /* Smooth transition for hover effects */
   text-transform: uppercase;
   /* Uppercase text */
@@ -153,38 +134,13 @@ button {
 }
 
 button:hover {
-  background-color: #9a8c98; /* Muted Lavender */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for better depth */
-  color: white; /* High contrast text color */
+  background-color: #9a8c98;
+  /* Muted Lavender - Adjust if needed for better hover effect */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Shadow effect on hover for depth */
 }
-
-
-
-@keyframes fadeToWhite {
-  from {
-    color: #283618; /* Original color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sharper shadow for clarity */
-  }
-  to {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Maintain sharpness */
-  }
-}
-
-.fade-to-white {
-  animation: fadeToWhite 2s forwards; /* Shorter duration */
-}
-
-/* Starting animation 1 second after page load for quick visibility */
-@media screen and (max-width: 767px) {
-  .fade-to-white {
-    animation: fadeToWhite 2s forwards 3s; /* Starts after 1 second */
-  }
-}
-
-
-
-
 
 /* About Section */
 #about-us {
@@ -290,8 +246,6 @@ footer {
     top: 0;
   }
 }
-
-
 
 /* Keyframes for slide-in animations */
 @keyframes slideInFromTop {
@@ -576,12 +530,6 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 
-.to-top:active {
-    color: #283618; /* This should be the original text color of the button */
-    background-color: #c9ada7; /* This should be the original background color of the button */
-}
-
-
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -649,143 +597,5 @@ input[type="submit"]:hover {
   body {
     padding: 0 5px;
     /* Less padding for smaller screens */
-  }
-}
-
-
-
-
-
-
-/* Keyframes for sliding in from the left */
-@keyframes slideInFromLeftFirst {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInFromLeftSecond {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
-
-/* Existing CSS... */
-
-/* Media Query for wide screens */
-@media screen and (min-width: 1612px) {
-  /* Apply animation to the 'About Us' section */
-  #about-us {
-    animation: slideInFromLeftFirst 1s ease-out forwards;
-  }
-
-  /* Apply animation to the 'Our Services' section with a delay */
-  #services {
-    animation: slideInFromLeftSecond 1s ease-out 0.5s forwards;
-  }
-}
-
-
-
-
-
-button#discover-seminars {
-  background-color: #c9ada7; /* Soft Pink */
-  color: #283618; /* Dark Olive */
-  border: none;
-  padding: 15px 30px; /* Increased padding */
-  cursor: pointer;
-  font-size: 20px; /* Increased font size */
-  font-weight: bold;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 20px 0;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); /* Slight shadow for text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for button */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s;
-}
-
-button#discover-seminars:hover {
-  background-color: #9a8c98; /* Muted Lavender */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* More prominent shadow on hover */
-  color: white;
-  transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 768px) {
-  button#discover-seminars {
-    font-size: 22px; /* Even larger font size */
-    padding: 18px 35px; /* Even more padding */
-  }
-}
-
-/* Slightly larger button size for mobile devices */
-@media screen and (max-width: 767px) {
-  button#discover-seminars {
-    padding: 12px 22px;
-    /* Slightly larger padding for mobile */
-    font-size: 24px;
-    /* Slightly larger font size for mobile */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  body {
-    padding: 0 15px !important; /* Reduced padding on both sides */
-  }
-}
-
-
-@media screen and (max-width: 767px) {
-  header p {
-    padding-top: 13px; /* Increase top padding */
-    padding-bottom: 13px; /* Increase bottom padding */
-  }
-}
-
-
-/* Original .to-top styles here... */
-
-@media screen and (max-width: 767px) {
-  .to-top {
-    display: inline-block; /* Ensure the element is displayable */
-    position: fixed;
-    bottom: 180px;
-    right: 20px;
-    padding: 15px;
-    font-size: 24px;
-    background-color: #c9ada7;
-    color: #283618;
-    border-radius: 50%;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    line-height: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    padding-bottom: 5px;
-    opacity: 0; /* Initially transparent */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.5s ease, visibility 0.5s; /* Transition for opacity and visibility */
-  }
-
-  .to-top.visible {
-    opacity: 1; /* Fully visible when class 'visible' is added */
-    visibility: visible; /* Make button visible when class 'visible' is added */
-  }
-
-  .to-top:hover {
-    background-color: #9a8c98;
-    color: white;
-  }
-
-  .to-top i {
-    vertical-align: middle;
-  }
-
-    .to-top.white-text {
-    color: white;
-    /* Only changes the text color */
   }
 }
