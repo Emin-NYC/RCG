@@ -1,140 +1,56 @@
-function updateButtonAppearance() {
-    let footerRect = footer.getBoundingClientRect();
-    let buttonRect = backToTopButton.getBoundingClientRect();
-
-    // Toggle 'white-text' class based on button's position relative to the footer
-    backToTopButton.classList.toggle('white-text', buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom);
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  let backToTopButton = document.querySelector('.to-top');
-  let footer = document.querySelector('footer');
-  let servicesSection = document.getElementById('services');
-  let windowHeight = window.innerHeight;
-
-  function updateButtonAppearance() {
-    let footerRect = footer.getBoundingClientRect();
-    let buttonRect = backToTopButton.getBoundingClientRect();
-
-    // Change text color based on button's position relative to the footer
-    if (buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom) {
-      backToTopButton.classList.add('white-text'); // Change text color to white
-    } else {
-      backToTopButton.classList.remove('white-text'); // Revert text color to black
-    }
-  }
-
-  window.addEventListener('scroll', () => {
-    // Update button appearance on scroll
-    updateButtonAppearance();
-
-    // Fade in or out the button based on services section position
-    let servicesPosition = servicesSection.getBoundingClientRect().top;
-    if (servicesPosition < windowHeight / 2) {
-      backToTopButton.classList.add('visible');
-    } else {
-      backToTopButton.classList.remove('visible');
-    }
-  });
-
-  // Update button appearance when clicked
-  backToTopButton.addEventListener('click', function() {
-    // Smooth scroll to top
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-
-    // Update appearance after scrolling
-    setTimeout(updateButtonAppearance, 300); // Adjust delay as needed
-  });
+document.getElementById('discover-seminars').addEventListener('click', function() {
+  window.location.href = '#services'; // Scrolls to the services section
 });
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  let backToTopButton = document.querySelector('.to-top');
-  let aboutUsSection = document.getElementById('services');
-  let windowHeight = window.innerHeight;
-
-  window.addEventListener('scroll', () => {
-    let aboutUsPosition = aboutUsSection.getBoundingClientRect().top;
-
-    if (aboutUsPosition < windowHeight / 2) {
-      backToTopButton.classList.add('visible'); // Fade in
-    } else {
-      backToTopButton.classList.remove('visible'); // Fade out
-    }
-  });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  // This checks if the screen width is 767px or less
-  if (window.innerWidth <= 767) {
-    var discoverSeminarsButton = document.getElementById('discover-seminars');
-    // Add the class that starts the animation
-    discoverSeminarsButton.classList.add('fade-to-white');
-  }
-});
-
-document.getElementById('discover-seminars').addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent default action
-  const servicesSection = document.getElementById('services');
-  servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
 
 document.getElementById('contact-us').addEventListener('click', function() {
-  window.location.href = '#contact-info'; // Scrolls to the contact information section
+  // Add the URL you want to redirect to after '#'
+  window.location.href = '#contact-info';
 });
 
 // Scroll-triggered animation for sections
 document.addEventListener('DOMContentLoaded', (event) => {
   const sections = document.querySelectorAll('#about-us, #services, #testimonials, #partnership');
 
-  sections.forEach(section => {
-    section.dataset.animated = 'false'; // Initialize the animation flag as false
-  });
-
   window.addEventListener('scroll', () => {
     sections.forEach(section => {
       const sectionTop = section.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      if (sectionTop < windowHeight - 100 && section.dataset.animated === 'false') {
+      if (sectionTop < windowHeight - 100) {
         section.style.opacity = '1';
         section.style.transform = 'translateX(0)';
         section.style.animation = '1s ease-out 0s 1 slideInFromLeft';
-        section.dataset.animated = 'true'; // Mark as animated
       }
     });
   });
 });
 
-// Modal functionality
+// Get the modal
 var modal = document.getElementById("contactModal");
+
+// Get the button that opens the modal
 var btn = document.getElementById("contact-us");
+
+// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close-button")[0];
 
+// When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
+// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
+// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 
-// Back to Top functionality
 document.querySelector('.to-top').addEventListener('click', function(e) {
   e.preventDefault();
   window.scrollTo({
@@ -143,7 +59,7 @@ document.querySelector('.to-top').addEventListener('click', function(e) {
   });
 });
 
-// Dynamic styling using JavaScript
+// Example: Applying styles to the body element
 document.body.style.fontFamily = "'Roboto Slab', serif";
 document.body.style.margin = "0";
 document.body.style.padding = "0 20px";
@@ -153,6 +69,7 @@ document.body.style.textAlign = "center";
 document.body.style.letterSpacing = "0.5px";
 document.body.style.lineHeight = "1.8";
 
+// Example: Applying styles to the banner class
 var banners = document.getElementsByClassName("banner");
 for(var i = 0; i < banners.length; i++) {
     banners[i].style.backgroundImage = "linear-gradient(to bottom, #005f73, #004853)";
@@ -164,12 +81,16 @@ for(var i = 0; i < banners.length; i++) {
     banners[i].style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.7)";
 }
 
+// Example: Applying responsive design using JavaScript
 window.addEventListener('resize', function() {
     if(window.innerWidth <= 767) {
+        // Apply responsive styles here
         var headerH1 = document.querySelector("header h1");
         if(headerH1) {
             headerH1.style.fontSize = "36px";
             headerH1.style.marginTop = "-80px";
         }
+    } else {
+        // Revert back to original styles if needed
     }
 });
