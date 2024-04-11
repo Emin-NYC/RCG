@@ -1,109 +1,175 @@
+function updateButtonAppearance() {
+    let footerRect = footer.getBoundingClientRect();
+    let buttonRect = backToTopButton.getBoundingClientRect();
+
+    // Toggle 'white-text' class based on button's position relative to the footer
+    backToTopButton.classList.toggle('white-text', buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom);
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    const backToTopButton = document.querySelector('.to-top');
-    const staticBackToTopButton = document.getElementById('back-to-top');
-    let allowScrollListener = true; // Flag to control the scroll listener
+  let backToTopButton = document.querySelector('.to-top');
+  let footer = document.querySelector('footer');
+  let servicesSection = document.getElementById('services');
+  let windowHeight = window.innerHeight;
 
-    backToTopButton.style.opacity = '0'; // Initially hide the floating button
-    backToTopButton.style.visibility = 'hidden';
+  function updateButtonAppearance() {
+    let footerRect = footer.getBoundingClientRect();
+    let buttonRect = backToTopButton.getBoundingClientRect();
 
-    // Function to handle Back to Top button visibility
-    function checkButtonVisibility() {
-        if (!allowScrollListener) return; // Exit if scroll listener is disabled
-
-        const aboutUsSection = document.getElementById('about-us');
-        const footer = document.querySelector('footer');
-        const aboutUsPosition = aboutUsSection.getBoundingClientRect().bottom;
-        const footerPosition = footer.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        // Show or hide floating button based on scroll position
-        if (window.scrollY > aboutUsPosition && footerPosition > windowHeight) {
-            backToTopButton.style.opacity = '1';
-            backToTopButton.style.visibility = 'visible';
-        } else {
-            backToTopButton.style.opacity = '0';
-            backToTopButton.style.visibility = 'hidden';
-        }
+    // Change text color based on button's position relative to the footer
+    if (buttonRect.bottom > footerRect.top && buttonRect.top < footerRect.bottom) {
+      backToTopButton.classList.add('white-text'); // Change text color to white
+    } else {
+      backToTopButton.classList.remove('white-text'); // Revert text color to black
     }
+  }
 
-    // Event listener for scrolling
-    window.addEventListener('scroll', checkButtonVisibility);
+  window.addEventListener('scroll', () => {
+    // Update button appearance on scroll
+    updateButtonAppearance();
 
-    // Event listener for floating Back to Top button click
-    backToTopButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Fade in or out the button based on services section position
+    let servicesPosition = servicesSection.getBoundingClientRect().top;
+    if (servicesPosition < windowHeight / 2) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Update button appearance when clicked
+  backToTopButton.addEventListener('click', function() {
+    // Smooth scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
 
-    // Static Back to Top button functionality
-    staticBackToTopButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        allowScrollListener = false; // Disable scroll listener temporarily
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Update appearance after scrolling
+    setTimeout(updateButtonAppearance, 300); // Adjust delay as needed
+  });
+});
 
-        // Re-enable scroll listener and check button visibility after scrolling
-        setTimeout(function() {
-            allowScrollListener = true;
-            checkButtonVisibility();
-        }, 700); // Delay should match the scroll animation duration
-    });
 
-    // Discover Seminars button smooth scrolling
-    document.getElementById('discover-seminars').addEventListener('click', function(event) {
-        event.preventDefault();
-        const servicesSection = document.getElementById('services');
-        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
 
-    // Contact Us button - Scroll to contact information section
-    document.getElementById('contact-us').addEventListener('click', function() {
-        window.location.href = '#contact-info';
-    });
 
-    // Scroll-triggered animation for sections
-    const sections = document.querySelectorAll('#about-us, #services, #testimonials, #partnership');
+document.addEventListener('DOMContentLoaded', function() {
+  let backToTopButton = document.querySelector('.to-top');
+  let aboutUsSection = document.getElementById('services');
+  let windowHeight = window.innerHeight;
+
+  window.addEventListener('scroll', () => {
+    let aboutUsPosition = aboutUsSection.getBoundingClientRect().top;
+
+    if (aboutUsPosition < windowHeight / 2) {
+      backToTopButton.classList.add('visible'); // Fade in
+    } else {
+      backToTopButton.classList.remove('visible'); // Fade out
+    }
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // This checks if the screen width is 767px or less
+  if (window.innerWidth <= 767) {
+    var discoverSeminarsButton = document.getElementById('discover-seminars');
+    // Add the class that starts the animation
+    discoverSeminarsButton.classList.add('fade-to-white');
+  }
+});
+
+document.getElementById('discover-seminars').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default action
+  const servicesSection = document.getElementById('services');
+  servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+
+document.getElementById('contact-us').addEventListener('click', function() {
+  window.location.href = '#contact-info'; // Scrolls to the contact information section
+});
+
+// Scroll-triggered animation for sections
+document.addEventListener('DOMContentLoaded', (event) => {
+  const sections = document.querySelectorAll('#about-us, #services, #testimonials, #partnership');
+
+  sections.forEach(section => {
+    section.dataset.animated = 'false'; // Initialize the animation flag as false
+  });
+
+  window.addEventListener('scroll', () => {
     sections.forEach(section => {
-        section.dataset.animated = 'false'; // Initialize the animation flag as false
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight - 100 && section.dataset.animated === 'false') {
+        section.style.opacity = '1';
+        section.style.transform = 'translateX(0)';
+        section.style.animation = '1s ease-out 0s 1 slideInFromLeft';
+        section.dataset.animated = 'true'; // Mark as animated
+      }
     });
+  });
+});
 
-    window.addEventListener('scroll', () => {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+// Modal functionality
+var modal = document.getElementById("contactModal");
+var btn = document.getElementById("contact-us");
+var span = document.getElementsByClassName("close-button")[0];
 
-            if (sectionTop < windowHeight - 100 && section.dataset.animated === 'false') {
-                section.style.opacity = '1';
-                section.style.transform = 'translateX(0)';
-                section.style.animation = '1s ease-out 0s 1 slideInFromLeft';
-                section.dataset.animated = 'true'; // Mark as animated
-            }
-        });
-    });
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-    // Modal functionality for contact form
-    const modal = document.getElementById("contactModal");
-    const modalBtn = document.getElementById("contact-us");
-    const closeModalBtn = document.getElementsByClassName("close-button")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-    modalBtn.onclick = function() {
-        modal.style.display = "block";
-    }
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
-    closeModalBtn.onclick = function() {
-        modal.style.display = "none";
-    }
+// Back to Top functionality
+document.querySelector('.to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+// Dynamic styling using JavaScript
+document.body.style.fontFamily = "'Roboto Slab', serif";
+document.body.style.margin = "0";
+document.body.style.padding = "0 20px";
+document.body.style.color = "#000000";
+document.body.style.backgroundColor = "#FFFFFF";
+document.body.style.textAlign = "center";
+document.body.style.letterSpacing = "0.5px";
+document.body.style.lineHeight = "1.8";
+
+var banners = document.getElementsByClassName("banner");
+for(var i = 0; i < banners.length; i++) {
+    banners[i].style.backgroundImage = "linear-gradient(to bottom, #005f73, #004853)";
+    banners[i].style.color = "white";
+    banners[i].style.textAlign = "center";
+    banners[i].style.padding = "8px 0";
+    banners[i].style.fontSize = "20px";
+    banners[i].style.fontWeight = "bold";
+    banners[i].style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.7)";
+}
+
+window.addEventListener('resize', function() {
+    if(window.innerWidth <= 767) {
+        var headerH1 = document.querySelector("header h1");
+        if(headerH1) {
+            headerH1.style.fontSize = "36px";
+            headerH1.style.marginTop = "-80px";
         }
     }
-
-    // Change button color with delay on mobile devices
-    setTimeout(function() {
-        const discoverButton = document.getElementById('discover-seminars');
-        if (window.innerWidth <= 767) { // Check for mobile resolution
-            discoverButton.classList.add('mobile-fade');
-        }
-    }, 2000); // 2s after page load
 });
