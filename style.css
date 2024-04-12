@@ -619,7 +619,8 @@ input[type="submit"]:hover {
 }
 
 .faq-item {
-  background: white;
+  background: linear-gradient(to right, #fff5e5, #ffe8cc);
+  /* Soft, warm gradient */
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -633,4 +634,46 @@ input[type="submit"]:hover {
 .faq-item p {
   color: #555;
   line-height: 1.6;
+}
+
+
+
+
+
+@keyframes lightBulbGlow {
+  0% {
+    color: #283618; /* Initial darker color */
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  100% {
+    color: white; /* Bright white */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8); /* Glowing effect */
+  }
+}
+
+
+
+#discover-seminars {
+  background-color: #c9ada7; /* Soft Pink */
+  color: #283618; /* Dark Olive */
+  border: none;
+  padding: 15px 30px; /* Increased padding */
+  cursor: pointer;
+  font-size: 20px; /* Increased font size */
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 20px 0;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for button */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s; /* Transition for smooth effect */
+  animation: lightBulbGlow 5s ease-out forwards; /* Animation applied */
+}
+
+
+button#discover-seminars:hover {
+  background-color: #9a8c98; /* Muted Lavender */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* More prominent shadow on hover */
+  color: white; /* High contrast text color for readability */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
