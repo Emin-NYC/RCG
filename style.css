@@ -677,3 +677,47 @@ button#discover-seminars:hover {
   color: white; /* High contrast text color for readability */
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
+
+
+
+#services {
+    background-color: #f9f7f5; /* Light background for the whole section */
+    padding: 20px; /* Padding around the section */
+    text-align: center; /* Center aligning the title and content */
+}
+
+#services h2 {
+    color: #2c3e50; /* Dark color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.service-list ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0 auto; /* Center align the list */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsive grid layout for cards */
+    gap: 10px; /* Space between cards */
+}
+
+.service-list li {
+ background: linear-gradient(to right, #fff5e5, #ffe8cc);
+    border: 1px solid #ddd; /* Subtle border for the cards */
+    padding: 15px; /* Padding inside each card */
+    border-radius: 8px; /* Rounded corners for the cards */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.service-list li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+}
+
+#services p {
+    color: #666; /* Dark gray color for the paragraph text */
+    font-size: 16px; /* Suitable font size for readability */
+    margin-top: 20px; /* Space above the paragraph */
+}
+
+
